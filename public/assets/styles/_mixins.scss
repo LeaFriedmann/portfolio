@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use './functions' as func;
+@use './maps' as m;
+
+// #region layout
+@mixin flex($direction: column, $align: center, $justify: center, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: func.px-to-rem($gap);
+}
+// #endregion
+
+// #region fonts
+@mixin font-syne($weight, $size) {
+  font-family: 'Syne';
+  font-weight: map.get(m.$f-weight, $weight);
+  font-size: func.px-to-rem($size);
+}
+
+@mixin font-overpass($weight, $size) {
+  font-family: 'Overpass';
+  font-weight: map.get(m.$f-weight, $weight);
+  font-size: func.px-to-rem($size);
+}
+// #endregion
