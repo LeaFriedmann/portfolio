@@ -1,0 +1,14 @@
+@use '../../../../../public/assets/styles/all-styles' as glob;
+div {
+  @include glob.flex(row, center, center, 4);
+
+  .lang-btn {
+    padding: 3px 6px;
+    @include glob.font-syne(bold, 16);
+    border: 2px transparent solid;
+
+    &--active{
+        border: 2px glob.$green solid;
+    }
+  }
+}
