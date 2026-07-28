@@ -1,0 +1,11 @@
+@use '../../../../public/assets/styles/all-styles' as glob;
+
+header{
+    background-color: glob.$cream;
+    @include glob.flex(row, center, space-between, 0);
+    padding: 30px 100px;
+
+    div{
+        @include glob.flex(row, center, center, 50);
+    }
+}
