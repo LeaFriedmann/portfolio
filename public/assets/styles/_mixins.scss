@@ -10,18 +10,23 @@
   justify-content: $justify;
   gap: func.px-to-rem($gap);
 }
+
+@mixin padding($tb-min, $tb-fluid, $tb-max, $rl-min, $rl-fluid, $rl-max) {
+  padding: func.use-clamp($tb-min, $tb-fluid, $tb-max)
+    func.use-clamp($rl-min, $rl-fluid, $rl-max);
+}
 // #endregion
 
 // #region fonts
-@mixin font-syne($weight, $size) {
+@mixin font-syne($weight, $min, $fluid, $max) {
   font-family: 'Syne';
   font-weight: map.get(m.$f-weight, $weight);
-  font-size: func.px-to-rem($size);
+  font-size: clamp(func.px-to-rem($min), $fluid, func.px-to-rem($max));
 }
 
-@mixin font-overpass($weight, $size) {
+@mixin font-overpass($weight, $min, $fluid, $max) {
   font-family: 'Overpass';
   font-weight: map.get(m.$f-weight, $weight);
-  font-size: func.px-to-rem($size);
+  font-size: clamp(func.px-to-rem($min), $fluid, func.px-to-rem($max));
 }
 // #endregion

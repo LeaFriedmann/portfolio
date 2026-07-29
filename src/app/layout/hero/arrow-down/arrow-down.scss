@@ -1,0 +1,33 @@
+@use '../../../../../public/assets/styles/all-styles' as glob;
+
+.scroll-down {
+  .arrow-box {
+    margin-bottom: glob.px-to-rem(8);
+    position: relative;
+    width: glob.px-to-rem(100);
+    height: glob.px-to-rem(160);
+    overflow: hidden;
+    .arrow {
+      position: absolute;
+      left: 50%;
+      width: glob.px-to-rem(50);
+      transform: translate(-50%, -150%);
+      animation: arrowMove 2s linear infinite;
+    }
+  }
+  p {
+    text-align: center;
+    @include glob.font-overpass(light, 20, 3vw, 22);
+    line-height: 0.5;
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translate(-50%, -150%);
+  }
+
+  100% {
+    transform: translate(-50%, 400%);
+  }
+}

@@ -1,0 +1,6 @@
+@use '../../../../../public/assets/styles/all-styles' as glob;
+a {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    @include glob.font-overpass(light, 16, 3vw, 22)
+}

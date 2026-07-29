@@ -1,0 +1,32 @@
+@use '../../../../public/assets/styles/all-styles' as glob;
+
+.hero {
+    min-height: calc(100svh - 102px);
+  @include glob.flex();
+  h1 {
+    text-align: center;
+    @include glob.font-syne(x-bold, 32, 10vw, 128);
+  }
+
+  &--heading {
+    @include glob.flex(row, center, center, 24);
+
+    .line {
+      height: 4px;
+      width: glob.use-clamp(130, 47vw, 690);
+      // width: clamp(130px, 45vw, 675px);
+      background-color: black;
+    }
+
+    p {
+      color: glob.$green;
+      @include glob.font-overpass(bold, 18, 5vw, 48);
+    }
+  }
+
+  &--mail-arrow{
+    width: 100%;
+    @include glob.flex(row, flex-end, space-between, 0);
+
+  }
+}
