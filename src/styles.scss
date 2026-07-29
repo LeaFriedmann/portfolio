@@ -25,3 +25,17 @@ main{
     max-width: glob.px-to-rem(1440);
     padding: 0 glob.use-clamp(8, 7vw, 100);
 }
+
+h2{
+    @include glob.font-syne(x-bold, 28, 6.5vw, 78);
+    margin-bottom: glob.px-to-rem(48);
+
+    &:hover{
+        color: glob.$green;
+    }
+}
+
+.text-regular{
+    @include glob.font-overpass(regular, 18, 2vw, 22)
+}
+

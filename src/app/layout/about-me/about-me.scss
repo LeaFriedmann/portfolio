@@ -1,0 +1,31 @@
+@use '../../../../public/assets/styles/all-styles' as glob;
+
+.wrapper-content {
+  @include glob.flex(row, flex-start, space-between, 48);
+}
+
+.text-part {
+  @include glob.flex(column, flex-start, flex-start, 0);
+}
+
+.wrapper-icons {
+  padding: glob.use-clamp(24, 10vw, 48) 0;
+
+  .icon-and-text {
+    @include glob.flex(row, center, flex-start, 16);
+    padding: glob.use-clamp(4, 0.4vw, 6) 0;
+
+    img{
+        width: glob.use-clamp(32, 3vw, 40);
+    }
+  }
+}
+
+.wrpr-btn{
+    width: 100%;
+    text-align: center;
+}
+
+.portrait {
+  width: glob.use-clamp(280, 40vw, 550);
+}
