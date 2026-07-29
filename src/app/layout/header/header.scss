@@ -1,11 +1,16 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
-header{
-    background-color: glob.$cream;
-    @include glob.flex(row, center, space-between, 0);
-    padding: 30px 100px;
+header {
+  max-width: glob.px-to-rem(1440);
+  background-color: glob.$cream;
+  @include glob.flex(row, center, space-between, 0);
+  @include glob.padding(18, 3vw, 30, 8, 7vw, 100);
 
-    div{
-        @include glob.flex(row, center, center, 50);
-    }
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  div {
+    @include glob.flex(row, center, center, 50);
+  }
 }
