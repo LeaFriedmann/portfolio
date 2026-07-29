@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@use '../public/assets/styles/all-styles' as glob;
 
 * {
     margin: 0;
@@ -13,4 +14,14 @@
     font-family: inherit;
     background: initial;
     border: initial;
+}
+
+body{
+    background-color: glob.$cream;
+    @include glob.flex()
+}
+
+main{
+    max-width: glob.px-to-rem(1440);
+    padding: 0 glob.use-clamp(8, 7vw, 100);
 }
