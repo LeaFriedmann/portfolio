@@ -1,0 +1,23 @@
+@use '../../../../../public/assets/styles/all-styles' as glob;
+
+.all-skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: glob.use-clamp(20, 5vw, 60)   glob.use-clamp(40, 10vw, 120);
+
+    .one-skill{
+    width: glob.use-clamp(80, 14vw, 100);
+    @include glob.flex();
+
+        &__icon{
+            margin: glob.px-to-rem(10);
+            height: glob.use-clamp(60, 10vw, 75)
+        }
+        &__name{
+            @include glob.font-overpass(bold, 16, 16px, 16);
+            text-align: center;
+        }
+    }
+}

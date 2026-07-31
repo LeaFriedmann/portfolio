@@ -1,0 +1,8 @@
+<section class="all-skills">
+  @for (item of skills; track item.name) {
+    <div class="one-skill">
+      <img class="one-skill__icon" src="{{ item.icon }}" alt="" />
+      <p class="one-skill__name">{{ item.name }}</p>
+    </div>
+  }
+</section>

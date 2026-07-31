@@ -1,0 +1,31 @@
+@use '../../../../public/assets/styles/all-styles' as glob;
+
+.skills {
+  margin-top: glob.use-clamp(32, 10vw, 64);
+  @include glob.padding(60, 7vw, 120, 16, 7vw, 115);
+  border: 4px solid black;
+}
+
+h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: glob.px-to-rem(10);
+  background: glob.$cream;
+  white-space: nowrap;
+}
+
+.contact-me {
+  @include glob.flex(row, flex-end, center, 16);
+  @include glob.font-overpass(regular, 20, 3vw, 22);
+  margin-top: glob.px-to-rem(36);
+
+  img {
+    height: glob.use-clamp(60, 10vw, 75);
+  }
+
+  a {
+    color: glob.$green;
+  }
+}
