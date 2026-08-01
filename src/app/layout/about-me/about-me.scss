@@ -1,7 +1,16 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
+h2 {
+  text-align: center;
+}
+
 .wrapper-content {
   @include glob.flex(row, flex-start, space-between, 48);
+
+  @include glob.respond(s, m) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .text-part {
@@ -15,17 +24,21 @@
     @include glob.flex(row, center, flex-start, 16);
     padding: glob.use-clamp(4, 0.4vw, 6) 0;
 
-    img{
-        width: glob.use-clamp(32, 3vw, 40);
+    img {
+      width: glob.use-clamp(32, 3vw, 40);
     }
   }
 }
 
-.wrpr-btn{
-    width: 100%;
-    text-align: center;
+.wrpr-btn {
+  width: 100%;
+  text-align: center;
 }
 
 .portrait {
-  width: glob.use-clamp(280, 40vw, 550);
+  width: glob.use-clamp(260, 40vw, 550);
+
+  @include glob.respond(s, m) {
+    width: glob.use-clamp(260, 100%, 550);
+  }
 }
