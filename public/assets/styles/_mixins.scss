@@ -30,3 +30,11 @@
   font-size: clamp(func.px-to-rem($min), $fluid, func.px-to-rem($max));
 }
 // #endregion
+
+// #region mediaquery
+@mixin respond($min-size, $max-size){
+  @media screen and (min-width: map.get(m.$breakpoints-min, $min-size)) and (max-width: map.get(m.$breakpoints-max, $max-size)){
+    @content;
+  };
+};
+// #endregion

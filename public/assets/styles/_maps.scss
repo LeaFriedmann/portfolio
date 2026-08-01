@@ -4,3 +4,15 @@ $f-weight: (
   bold: 700,
   x-bold: 800
 );
+
+$breakpoints-min: (
+  s: 320px,
+  m: 481px,
+  l: 769px
+);
+
+$breakpoints-max: (
+  s: 480px,
+  m: 768px, 
+  l: 1440px
+)
