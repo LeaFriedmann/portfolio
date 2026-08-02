@@ -1,0 +1,47 @@
+@use '../../../../public/assets/styles/all-styles' as glob;
+
+.ref-section {
+  width: 100%;
+  @include glob.flex();
+   
+  > p {
+    width: glob.use-clamp(250, 60vw, 650);
+    text-align: center;
+    margin-bottom: glob.px-to-rem(48);
+  }
+
+  .references-wrpr {
+    width: 100%;
+    @include glob.flex(row, stretch, center, 24);
+    flex-wrap: wrap;
+
+    .reference {
+        @include glob.flex(column, center, flex-start, 0);
+        flex: 1;
+        border: solid black 4px;
+        padding: glob.px-to-rem(8);
+        min-width: glob.px-to-rem(260);
+        max-width:glob.px-to-rem(400);
+
+        >img{
+        margin-top: glob.px-to-rem(14);
+
+        }
+
+      &__name {
+        @include glob.font-syne(bold, 20, 2.5vw, 22);
+        margin-top: glob.px-to-rem(20);
+      }
+
+      &__role {
+        @include glob.font-overpass(regular, 14, 14px, 14);
+        margin-top: glob.px-to-rem(8);
+      }
+
+      &__ref {
+        @include glob.font-overpass(regular, 18, 18px, 18);
+        margin-top: glob.px-to-rem(23);
+      }
+    }
+  }
+}
