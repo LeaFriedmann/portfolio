@@ -7,10 +7,11 @@ import { MySkills } from './layout/my-skills/my-skills';
 import { Projects } from './layout/projects/projects';
 import { References } from './layout/references/references';
 import { AnimatedArrow } from './shared/components/arrow/arrow';
+import { ContactForm } from './layout/contact-form/contact-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Hero, AboutMe, MySkills, Projects, References, AnimatedArrow],
+  imports: [RouterOutlet, Header, Hero, AboutMe, MySkills, Projects, References, AnimatedArrow, ContactForm],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

@@ -1,0 +1,81 @@
+@use '../../../../public/assets/styles/all-styles' as glob;
+
+form {
+  background-color: black;
+  color: glob.$cream;
+  @include glob.font-overpass(regular, 16, 16px, 16);
+  padding: 20px;
+  width: glob.use-clamp(260, 70%, 650);
+}
+
+.border {
+  border-bottom: 2px glob.$cream solid;
+  margin-top: glob.px-to-rem(16);
+  margin-bottom: glob.px-to-rem(8);
+  padding: glob.px-to-rem(12) glob.px-to-rem(8) glob.px-to-rem(6) glob.px-to-rem(8);
+
+  &--primary {
+    &:hover {
+      outline: 4px glob.$cream solid;
+      border-bottom: 2px transparent solid;
+    }
+  }
+
+  &--focused {
+    border: 2px glob.$cream solid;
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 3%;
+      transform: translate(0, -50%);
+      padding: 0 glob.px-to-rem(8);
+      background: black;
+      z-index: 1;
+    }
+  }
+}
+
+input,
+textarea {
+  width: glob.use-clamp(200, 100%, 600);
+  field-sizing: content;
+  outline: none;
+
+  &:focus {
+    background-color: black;
+  }
+}
+
+textarea {
+  min-height: glob.px-to-rem(100);
+}
+
+.checkbox {
+  @include glob.flex(row, center, flex-start, 8);
+  margin-top: glob.px-to-rem(16);
+  margin-bottom: glob.px-to-rem(8);
+  //   padding: 8px;
+
+  input {
+    width: auto;
+  }
+
+  label {
+    font-size: glob.px-to-rem(14);
+
+    a {
+      color: glob.$green;
+    }
+  }
+}
+
+.btn-wrpr {
+  width: 100%;
+  @include glob.flex();
+}
+
+.error {
+  color: glob.$red;
+  @include glob.font-overpass(regular, 14, 14px, 14);
+}

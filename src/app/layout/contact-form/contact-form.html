@@ -1,0 +1,52 @@
+<form [formGroup]="contactForm" (ngSubmit)="formSubmit()">
+  
+  <div class="border" [class.border--primary]="!nameFocused" [class.border--focused]="nameFocused">
+    <label for="YourName" [class.border-touched]="nameFocused">Your name</label>
+    <input id="YourName" type="text" formControlName="name" (focus)="nameFocused = true" />
+  </div>
+
+  @if (!name?.valid && name?.touched) {
+    <p class="error">Your Name is required</p>
+  }
+
+  <div class="border" [class.border--primary]="!mailFocused" [class.border--focused]="mailFocused">
+    <label for="mail">Your email</label>
+    <input id="mail" type="text" formControlName="email" (focus)="mailFocused = true" />
+  </div>
+
+  @if (!email?.valid && email?.touched) {
+    <p class="error">Your E-Mail is required</p>
+  }
+
+  <div
+    class="border"
+    [class.border--primary]="!messageFocused"
+    [class.border--focused]="messageFocused"
+  >
+    <label for="message">Your message</label>
+    <textarea
+      id="message"
+      type="text"
+      formControlName="message"
+      (focus)="messageFocused = true"
+    ></textarea>
+  </div>
+
+  @if (!message?.valid && message?.touched) {
+    <p class="error">Your message is required</p>
+  }
+  <div class="checkbox">
+    <input id="check" type="checkbox" formControlName="checkbox" />
+    <label for="check"
+      >I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</label
+    >
+  </div>
+
+  @if (!checkbox?.valid && checkbox?.touched) {
+    <p class="error">Please accept the privacy policy.</p>
+  }
+
+  <div class="btn-wrpr">
+    <button type="submit">Send message</button>
+  </div>
+</form>
