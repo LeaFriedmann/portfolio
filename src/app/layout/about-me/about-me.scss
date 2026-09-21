@@ -7,7 +7,7 @@ h2 {
 .wrapper-content {
   @include glob.flex(row, flex-start, space-between, 48);
 
-  @include glob.respond(s, m) {
+  @include glob.mobile() {
     flex-direction: column;
     align-items: center;
   }
@@ -38,7 +38,7 @@ h2 {
 .portrait {
   width: glob.use-clamp(260, 40vw, 550);
 
-  @include glob.respond(s, m) {
+  @include glob.mobile() {
     width: glob.use-clamp(260, 100%, 550);
   }
 }

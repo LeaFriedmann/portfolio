@@ -34,15 +34,16 @@
         }
       }
 
-      @include glob.respond(s, m) {
+      @include glob.mobile() {
         flex-direction: column;
       }
 
       &__img {
         width: glob.use-clamp(260, 40vw, 620);
+        z-index: 1;
 
-        @include glob.respond(s, m) {
-          width: glob.use-clamp(270, 100%, 450);
+        @include glob.mobile() {
+          width: glob.use-clamp(270, 100%, 650);
         }
       }
 
@@ -54,6 +55,11 @@
         transition:
           transform 0.2s ease-out,
           opacity 0.1s ease;
+
+        @include glob.mobile() {
+          max-width: 600px;
+          width: glob.use-clamp(240, 90%, 600);
+        }
 
         .count {
           @include glob.font-syne(bold, 23, 4vw, 48);

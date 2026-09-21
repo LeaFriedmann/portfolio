@@ -31,8 +31,15 @@
 // #endregion
 
 // #region mediaquery
-@mixin respond($min-size, $max-size) {
-  @media screen and (min-width: map.get(m.$breakpoints-min, $min-size)) and (max-width: map.get(m.$breakpoints-max, $max-size)) {
+
+@mixin mobile() {
+  @media (max-width: func.px-to-rem(768)) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (max-width: func.px-to-rem(1024)) {
     @content;
   }
 }
