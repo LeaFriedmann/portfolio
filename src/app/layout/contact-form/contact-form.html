@@ -8,8 +8,12 @@
     <input id="YourName" type="text" formControlName="name" (focus)="nameFocused.set(true)" placeholder="{{ placeHolderName() }}" />
   </div>
   <div class="errorWrapper">
-    @if (!name?.valid && name?.touched) {
+    @if (name?.hasError('required') && name?.touched) {
       <p class="error">Your Name is required</p>
+    } @else if (name?.hasError('stringTooShort') && name?.touched) {
+      <p class="error">Please enter at least three characters</p>
+    } @else if (name?.hasError('pattern') && name?.touched) {
+      <p class="error">Please use only letters and valid name characters</p>
     }
   </div>
 
@@ -23,7 +27,15 @@
   </div>
 
   <div class="errorWrapper">
-    @if (!email?.valid && email?.touched) {
+    @if (
+      ((email?.hasError('email') && email?.touched) ||
+        email?.hasError('pattern') ||
+        email?.hasError('tooManyDots') ||
+        email?.hasError('adjacentSpecialCharacters')) &&
+      email?.touched
+    ) {
+      <p class="error">Please use a valid E-Mail adress</p>
+    } @else if (!email?.valid && email?.touched) {
       <p class="error">Your E-Mail is required</p>
     }
   </div>
@@ -44,8 +56,10 @@
   </div>
 
   <div class="errorWrapper">
-    @if (!message?.valid && message?.touched) {
-      <p class="error">Your message is required</p>
+    @if (message?.hasError('required') && message?.touched) {
+      <p class="error">Your message is empty</p>
+    } @else if (message?.hasError('stringTooShort')) {
+      <p class="error">Please type in at least 10 characters</p>
     }
   </div>
 

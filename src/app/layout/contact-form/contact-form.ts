@@ -1,6 +1,7 @@
 import { Component, computed, inject, signal, WritableSignal } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { minLengthWithoutSpaces } from '../../shared/validators/min-length-without-spaces/min-length-without-spaces';
+import { advancedEmailValidator } from '../../shared/validators/email-validator';
 
 @Component({
   selector: 'contact-form',
@@ -22,8 +23,8 @@ export class ContactForm {
   placeHolderMessage = computed(() => this.messageFocused() ? "" : "Your message");
 
   contactForm = this.fb.group({
-    name: ['', [Validators.required, minLengthWithoutSpaces(3)]],
-    email: ['', [Validators.required, Validators.email]],
+    name: ['', [Validators.required, minLengthWithoutSpaces(3), Validators.pattern(/^[\p{L}\p{M}]+(?:[ '’-][\p{L}\p{M}]+)*$/u)]],
+    email: ['', [Validators.required, Validators.email, Validators.pattern(/\.[a-zA-Z]{2,}$/), advancedEmailValidator()]],
     message: ['', [Validators.required, minLengthWithoutSpaces(10)]],
     checkbox: ['', Validators.requiredTrue],
   });
