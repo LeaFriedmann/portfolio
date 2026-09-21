@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject, signal, WritableSignal } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { minLengthWithoutSpaces } from '../../shared/validators/min-length-without-spaces/min-length-without-spaces';
 
@@ -12,9 +12,14 @@ export class ContactForm {
   //#region properties
   fb = inject(FormBuilder);
 
-  nameFocused: boolean = false;
-  mailFocused: boolean = false;
-  messageFocused: boolean = false;
+  nameFocused: WritableSignal<boolean> = signal(false);
+  mailFocused: WritableSignal<boolean> = signal(false);
+  messageFocused:WritableSignal<boolean> = signal(false);
+
+  // placeholder empty on focus
+  placeHolderName = computed(() => this.nameFocused() ? "" : "Your Name");
+  placeHolderEmail = computed(() => this.mailFocused() ? "" : "Your email");
+  placeHolderMessage = computed(() => this.messageFocused() ? "" : "Your message");
 
   contactForm = this.fb.group({
     name: ['', [Validators.required, minLengthWithoutSpaces(3)]],
