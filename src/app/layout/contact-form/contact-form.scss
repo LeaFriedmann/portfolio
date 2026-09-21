@@ -10,13 +10,14 @@ form {
 
 .border {
   border-bottom: 2px glob.$cream solid;
+  border-top: 2px transparent solid;
   margin-top: glob.px-to-rem(16);
   margin-bottom: glob.px-to-rem(8);
   padding: glob.px-to-rem(12) glob.px-to-rem(8) glob.px-to-rem(6) glob.px-to-rem(8);
 
   &--primary {
     &:hover {
-      outline: 4px glob.$cream solid;
+      outline: 3px glob.$cream solid;
       border-bottom: 2px transparent solid;
     }
   }
@@ -39,7 +40,6 @@ form {
 input,
 textarea {
   width: glob.use-clamp(200, 100%, 600);
-  field-sizing: content;
   outline: none;
 
   &:focus {
@@ -75,7 +75,11 @@ textarea {
   @include glob.flex();
 }
 
-.error {
-  color: glob.$red;
-  @include glob.font-overpass(regular, 14, 14px, 14);
+.errorWrapper {
+  min-height: 17px;
+
+  .error {
+    color: glob.$red;
+    @include glob.font-overpass(regular, 14, 14px, 14);
+  }
 }

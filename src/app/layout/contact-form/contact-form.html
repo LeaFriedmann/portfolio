@@ -7,10 +7,11 @@
     </label>
     <input id="YourName" type="text" formControlName="name" (focus)="nameFocused.set(true)" placeholder="{{ placeHolderName() }}" />
   </div>
-
-  @if (!name?.valid && name?.touched) {
-    <p class="error">Your Name is required</p>
-  }
+  <div class="errorWrapper">
+    @if (!name?.valid && name?.touched) {
+      <p class="error">Your Name is required</p>
+    }
+  </div>
 
   <div class="border" [class.border--primary]="!mailFocused()" [class.border--focused]="mailFocused()">
     <label for="mail">
@@ -21,9 +22,11 @@
     <input id="mail" type="text" formControlName="email" (focus)="mailFocused.set(true)" placeholder="{{ placeHolderEmail() }}" />
   </div>
 
-  @if (!email?.valid && email?.touched) {
-    <p class="error">Your E-Mail is required</p>
-  }
+  <div class="errorWrapper">
+    @if (!email?.valid && email?.touched) {
+      <p class="error">Your E-Mail is required</p>
+    }
+  </div>
 
   <div class="border" [class.border--primary]="!messageFocused()" [class.border--focused]="messageFocused()">
     <label for="message">
@@ -40,17 +43,22 @@
     ></textarea>
   </div>
 
-  @if (!message?.valid && message?.touched) {
-    <p class="error">Your message is required</p>
-  }
+  <div class="errorWrapper">
+    @if (!message?.valid && message?.touched) {
+      <p class="error">Your message is required</p>
+    }
+  </div>
+
   <div class="checkbox">
     <input id="check" type="checkbox" formControlName="checkbox" />
     <label for="check">I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</label>
   </div>
 
-  @if (!checkbox?.valid && checkbox?.touched) {
-    <p class="error">Please accept the privacy policy.</p>
-  }
+  <div class="errorWrapper">
+    @if (!checkbox?.valid && checkbox?.touched) {
+      <p class="error">Please accept the privacy policy.</p>
+    }
+  </div>
 
   <div class="btn-wrpr">
     <button type="submit">Send message</button>
