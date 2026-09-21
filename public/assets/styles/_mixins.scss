@@ -12,8 +12,7 @@
 }
 
 @mixin padding($tb-min, $tb-fluid, $tb-max, $rl-min, $rl-fluid, $rl-max) {
-  padding: func.use-clamp($tb-min, $tb-fluid, $tb-max)
-    func.use-clamp($rl-min, $rl-fluid, $rl-max);
+  padding: func.use-clamp($tb-min, $tb-fluid, $tb-max) func.use-clamp($rl-min, $rl-fluid, $rl-max);
 }
 // #endregion
 
@@ -32,9 +31,9 @@
 // #endregion
 
 // #region mediaquery
-@mixin respond($min-size, $max-size){
-  @media screen and (min-width: map.get(m.$breakpoints-min, $min-size)) and (max-width: map.get(m.$breakpoints-max, $max-size)){
+@mixin respond($min-size, $max-size) {
+  @media screen and (min-width: map.get(m.$breakpoints-min, $min-size)) and (max-width: map.get(m.$breakpoints-max, $max-size)) {
     @content;
-  };
-};
+  }
+}
 // #endregion
