@@ -1,0 +1,22 @@
+@use '../../../../../public/assets/styles/all-styles' as glob;
+
+.scroll-up-section {
+  overflow: hidden;
+  width: glob.px-to-rem(55);
+  height: glob.px-to-rem(80);
+
+  .arrow-btn {
+    img {
+      transform: translate(0, 30%);
+      transition: transform 0.3s ease-out;
+
+      &:hover {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  @include glob.tablet() {
+    display: none;
+  }
+}

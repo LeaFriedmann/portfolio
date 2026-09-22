@@ -44,4 +44,10 @@
       @include glob.flex();
     }
   }
+
+  scroll-up-arrow{
+    position: absolute;
+    right: glob.use-clamp(16, 6vw, 100);
+    bottom: 0;
+  }
 }
