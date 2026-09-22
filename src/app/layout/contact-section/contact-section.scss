@@ -1,0 +1,38 @@
+@use '../../../../public/assets/styles/all-styles' as glob;
+
+.contact-section{
+    padding-top: 100px;
+    width: 100%;
+    background-color: black;
+    @include glob.flex();
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    
+    @include glob.tablet(){
+    padding-top: 70px;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 100%);
+    }
+
+    @include glob.mobile(){
+    padding-top: 50px;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+    }
+
+    h2{
+        width: 100%;
+        color: glob.$cream;
+        text-align: left;
+    }
+
+    h3{
+        margin-bottom: glob.px-to-rem(8);
+        text-align: center;
+        @include glob.font-overpass(bold, 22, 3.5vw, 32);
+        color: glob.$green;
+    }
+
+    p{
+        text-align: center;
+        @include glob.font-overpass(regular, 16, 2.5vw, 22);
+        color: glob.$cream;
+    }
+}

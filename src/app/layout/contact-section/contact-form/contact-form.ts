@@ -1,7 +1,8 @@
 import { Component, computed, inject, signal, WritableSignal } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-import { minLengthWithoutSpaces } from '../../shared/validators/min-length-without-spaces/min-length-without-spaces';
-import { advancedEmailValidator } from '../../shared/validators/email-validator';
+import { minLengthWithoutSpaces } from '../../../shared/validators/min-length-without-spaces/min-length-without-spaces';
+import { advancedEmailValidator } from '../../../shared/validators/email-validator';
+
 
 @Component({
   selector: 'contact-form',
