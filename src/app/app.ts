@@ -13,7 +13,7 @@ import { ContactForm } from './layout/contact-form/contact-form';
   selector: 'app-root',
   imports: [RouterOutlet, Header, Hero, AboutMe, MySkills, Projects, References, AnimatedArrow, ContactForm],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('portfolio');

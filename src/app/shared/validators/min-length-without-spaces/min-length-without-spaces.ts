@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-import {
-  AbstractControl,
-  ReactiveFormsModule,
-  ValidationErrors,
-  ValidatorFn,
-} from '@angular/forms';
+import { AbstractControl, ReactiveFormsModule, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 export function minLengthWithoutSpaces(minLength: number): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {

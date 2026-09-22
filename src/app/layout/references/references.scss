@@ -3,7 +3,8 @@
 .ref-section {
   width: 100%;
   @include glob.flex();
-   
+  margin-top: glob.px-to-rem(120);
+
   > p {
     width: glob.use-clamp(250, 60vw, 650);
     text-align: center;

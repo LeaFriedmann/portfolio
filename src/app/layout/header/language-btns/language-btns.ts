@@ -7,5 +7,5 @@ import { Component, signal, computed, WritableSignal } from '@angular/core';
   styleUrl: './language-btns.scss',
 })
 export class LanguageBtns {
-  language:WritableSignal<'de' | 'en'> = signal('de');
+  language: WritableSignal<'de' | 'en'> = signal('de');
 }

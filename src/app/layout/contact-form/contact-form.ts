@@ -15,12 +15,12 @@ export class ContactForm {
 
   nameFocused: WritableSignal<boolean> = signal(false);
   mailFocused: WritableSignal<boolean> = signal(false);
-  messageFocused:WritableSignal<boolean> = signal(false);
+  messageFocused: WritableSignal<boolean> = signal(false);
 
   // placeholder empty on focus
-  placeHolderName = computed(() => this.nameFocused() ? "" : "Your Name");
-  placeHolderEmail = computed(() => this.mailFocused() ? "" : "Your email");
-  placeHolderMessage = computed(() => this.messageFocused() ? "" : "Your message");
+  placeHolderName = computed(() => (this.nameFocused() ? '' : 'Your Name'));
+  placeHolderEmail = computed(() => (this.mailFocused() ? '' : 'Your email'));
+  placeHolderMessage = computed(() => (this.messageFocused() ? '' : 'Your message'));
 
   contactForm = this.fb.group({
     name: ['', [Validators.required, minLengthWithoutSpaces(3), Validators.pattern(/^[\p{L}\p{M}]+(?:[ '’-][\p{L}\p{M}]+)*$/u)]],

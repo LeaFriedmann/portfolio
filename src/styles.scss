@@ -2,44 +2,44 @@
 @use '../public/assets/styles/all-styles' as glob;
 
 * {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    text-decoration: none;
-    position: relative;
-    list-style: none;
-    font-size: inherit;
-    color: inherit;
-    font-family: inherit;
-    background: initial;
-    border: initial;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  text-decoration: none;
+  position: relative;
+  list-style: none;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+  background: initial;
+  border: initial;
 }
 
 body {
-    background-color: glob.$cream;
-    @include glob.flex();
+  background-color: glob.$cream;
+  @include glob.flex();
 }
 
 main {
-    max-width: glob.px-to-rem(1440);
-    padding: 0 glob.use-clamp(16, 6vw, 100);
+  max-width: glob.px-to-rem(1440);
+  padding: 0 glob.use-clamp(16, 6vw, 100);
 }
 
 h2 {
-    @include glob.font-syne(x-bold, 28, 6.5vw, 78);
-    margin-bottom: glob.px-to-rem(48);
+  @include glob.font-syne(x-bold, 28, 6.5vw, 78);
+  margin-bottom: glob.px-to-rem(48);
 
-    &:hover {
-        color: glob.$green;
-    }
+  &:hover {
+    color: glob.$green;
+  }
 }
 
 a,
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .text-regular {
-    @include glob.font-overpass(regular, 20, 2vw, 22);
+  @include glob.font-overpass(regular, 20, 2vw, 22);
 }

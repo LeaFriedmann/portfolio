@@ -8,7 +8,12 @@ import { Component } from '@angular/core';
 })
 export class References {
   referenceList: { name: string; role: string; reference: string }[] = [
-    { name: 'A. Renhard', role: 'Team Partner', reference: 'Michael really kept the team together with his great organization and clear communication. We wouldn`t have got this far without his commitment' },
+    {
+      name: 'A. Renhard',
+      role: 'Team Partner',
+      reference:
+        'Michael really kept the team together with his great organization and clear communication. We wouldn`t have got this far without his commitment',
+    },
     {
       name: 'B. Weiß',
       role: 'Frontend Engineer',

@@ -7,8 +7,8 @@ div {
     @include glob.font-syne(bold, 16, 16px, 16);
     border: 2px transparent solid;
 
-    &--active{
-        border: 2px glob.$green solid;
+    &--active {
+      border: 2px glob.$green solid;
     }
   }
 }

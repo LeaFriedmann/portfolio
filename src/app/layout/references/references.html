@@ -1,14 +1,16 @@
 <section class="ref-section">
-    <h2>References</h2>
-    <p class="text-regular">I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.</p>
-    <div class="references-wrpr">
-        @for (item of referenceList; track $index) {
-            <div class="reference">
-                <img src="./assets/images/quote-icon.png" alt="quote icon">
-                <p class="reference__name">{{item.name}}</p>
-                <p class="reference__role">{{item.role}}</p>
-                <p class="reference__ref">{{item.reference}}</p>
-            </div>
-        }
-    </div>
+  <h2>References</h2>
+  <p class="text-regular">
+    I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.
+  </p>
+  <div class="references-wrpr">
+    @for (item of referenceList; track $index) {
+      <div class="reference">
+        <img src="./assets/images/quote-icon.png" alt="quote icon" />
+        <p class="reference__name">{{ item.name }}</p>
+        <p class="reference__role">{{ item.role }}</p>
+        <p class="reference__ref">{{ item.reference }}</p>
+      </div>
+    }
+  </div>
 </section>

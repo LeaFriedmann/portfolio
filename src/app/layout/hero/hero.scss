@@ -1,7 +1,7 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
 .hero {
-    min-height: calc(100svh - 102px);
+  min-height: calc(100svh - 102px);
   @include glob.flex();
   h1 {
     text-align: center;
@@ -24,9 +24,8 @@
     }
   }
 
-  &--mail-arrow{
+  &--mail-arrow {
     width: 100%;
     @include glob.flex(row, flex-end, space-between, 0);
-
   }
 }
