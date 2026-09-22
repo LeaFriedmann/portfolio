@@ -23,16 +23,25 @@
     text-align: left;
   }
 
-  h3 {
-    margin-bottom: glob.px-to-rem(8);
-    text-align: center;
-    @include glob.font-overpass(bold, 22, 3.5vw, 32);
-    color: glob.$green;
-  }
+  .form-wrapper {
+    width: 100%;
+    @include glob.flex();
+    h3 {
+      margin-bottom: glob.px-to-rem(8);
+      text-align: center;
+      @include glob.font-overpass(bold, 22, 3.5vw, 32);
+      color: glob.$green;
+    }
 
-  p {
-    text-align: center;
-    @include glob.font-overpass(regular, 16, 2.5vw, 22);
-    color: glob.$cream;
+    p {
+      text-align: center;
+      @include glob.font-overpass(regular, 16, 2.5vw, 22);
+      color: glob.$cream;
+    }
+
+    contact-form {
+      width: 100%;
+      @include glob.flex();
+    }
   }
 }
