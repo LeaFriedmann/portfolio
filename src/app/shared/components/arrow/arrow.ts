@@ -1,16 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  computed,
-  ElementRef,
-  Input,
-  input,
-  InputSignal,
-  Signal,
-  signal,
-  viewChild,
-  ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, input, InputSignal, Signal, signal, viewChild } from '@angular/core';
 
 @Component({
   selector: 'animated-arrow',
@@ -19,7 +7,6 @@ import {
   styleUrl: './arrow.scss',
 })
 export class AnimatedArrow implements AfterViewInit {
-
   arrow: Signal<ElementRef<HTMLDivElement>> = viewChild.required<ElementRef<HTMLDivElement>>('arrow');
 
   arrowMirrored: InputSignal<boolean> = input(false);
