@@ -7,13 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './projects.scss',
 })
 export class Projects {
-  myProjects: { name: string; skills: string; description: string; imgUrl: string }[] = [
+  myProjects: { name: string; skills: string; description: string; imgUrl: string; gitHubUrl: string; liveUrl: string }[] = [
     {
       name: 'Join',
       skills: 'Angular | Typescript | HTML | CSS | Firebase',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       imgUrl: './assets/images/join-img.png',
+      gitHubUrl: 'https://github.com/LeaFriedmann/join.git',
+      liveUrl: '/angular-projects/join',
     },
     {
       name: 'Sharkie',
@@ -21,18 +23,22 @@ export class Projects {
       description:
         'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
       imgUrl: './assets/images/pollo-loco-img.png',
+      gitHubUrl: 'https://github.com/LeaFriedmann/El-pollo-loco.git',
+      liveUrl: '/El pollo loco/',
     },
     {
       name: 'Pokedex',
       skills: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       imgUrl: './assets/images/pokedex-img.png',
+      gitHubUrl: 'https://github.com/LeaFriedmann/Pokedex.git',
+      liveUrl: '/Pokedex/',
     },
   ];
 
-  highlitedProject: number | '' = '';
+  // highlitedProject: number | '' = '';
 
-  highlightProject(project: number | '') {
-    this.highlitedProject = project;
-  }
+  // highlightProject(project: number | '') {
+  //   this.highlitedProject = project;
+  // }
 }
