@@ -3,12 +3,25 @@ div {
   @include glob.flex(row, center, center, 4);
 
   .lang-btn {
-    padding: 3px 6px;
+    @include glob.flex($align: end);
+    padding: 3px 9px;
     @include glob.font-syne(bold, 16, 16px, 16);
     border: 2px transparent solid;
 
     &--active {
       border: 2px glob.$green solid;
+    }
+
+    &:hover {
+      .line--visible {
+        background-color: black;
+      }
+    }
+
+    .line {
+      height: 2px;
+      width: 20px;
+      background-color: transparent;
     }
   }
 }
