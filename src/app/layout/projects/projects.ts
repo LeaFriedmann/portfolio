@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, signal, viewChildren, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'projects',
@@ -36,9 +36,39 @@ export class Projects {
     },
   ];
 
-  // highlitedProject: number | '' = '';
+  prevRatio: number = 0;
+  animate: WritableSignal<boolean[]> = signal<boolean[]>(this.myProjects.map(() => false));
+  projects = viewChildren<ElementRef<HTMLDivElement>>('project');
 
-  // highlightProject(project: number | '') {
-  //   this.highlitedProject = project;
-  // }
+  ngAfterViewInit() {
+    this.projects().forEach((project, index) => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.intersectionRatio >= 0.9) {
+            this.slideIn(index);
+          } else if (entry.intersectionRatio <= 0.65) {
+            this.slideOut(index);
+          }
+        },
+        { threshold: [0.65, 0.9] },
+      );
+      observer.observe(project.nativeElement);
+    });
+  }
+
+  slideIn(index: number) {
+    this.animate.update((values) => {
+      const newValues = [...values];
+      newValues[index] = true;
+      return newValues;
+    });
+  }
+
+  slideOut(index: number) {
+    this.animate.update((values) => {
+      const newValues = [...values];
+      newValues[index] = false;
+      return newValues;
+    });
+  }
 }

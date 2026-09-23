@@ -3,16 +3,24 @@
   <p class="text-regular">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
   <section class="wrpr-projects">
     @for (item of myProjects; track item.name; let projectNr = $index, nrProjects = $count; let secondaryStyle = $odd) {
-      <div class="project" [class.project--secondary]="secondaryStyle" [class.project--primary]="!secondaryStyle">
+      <div
+        #project
+        [class.animate]="animate()[projectNr]"
+        class="project"
+        [class.project--secondary]="secondaryStyle"
+        [class.project--primary]="!secondaryStyle"
+      >
+        <p class="count">0{{ projectNr + 1 }}/0{{ nrProjects }}</p>
         <img class="project__img" src="{{ item.imgUrl }}" alt="" />
         <div class="project__description-wrpr">
-          <p class="count">0{{ projectNr + 1 }}/0{{ nrProjects }}</p>
           <div class="info">
             <h3>{{ item.name }}</h3>
             <p class="info__skills">{{ item.skills }}</p>
             <p class="info__description">{{ item.description }}</p>
-            <a href="{{ item.gitHubUrl }}">Github</a>
-            <a href="{{ item.liveUrl }}">Live</a>
+            <div class="btn-wrapper">
+              <a class="btn-url" href="{{ item.gitHubUrl }}">Github</a>
+              <a class="btn-url" href="{{ item.liveUrl }}">Live</a>
+            </div>
           </div>
         </div>
       </div>
