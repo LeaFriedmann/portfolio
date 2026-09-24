@@ -118,16 +118,7 @@
             margin-top: 16px;
 
             .btn-url {
-              width: glob.use-clamp(100, 25vw, 180);
-              padding: clamp(8px, 2vw, 20px);
-              border: 4px solid black;
-              @include glob.font-overpass(regular, 18, 3vw, 23);
-              text-align: center;
-
-              &:hover {
-                font-weight: 700;
-                width: glob.use-clamp(105, 28vw, 200);
-              }
+              @include glob.button();
             }
           }
         }
