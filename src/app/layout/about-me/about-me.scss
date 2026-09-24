@@ -1,7 +1,11 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
 h2 {
-  text-align: center;
+  text-align: left;
+
+  @include glob.mobile() {
+    text-align: center;
+  }
 }
 
 .wrapper-content {
@@ -32,7 +36,11 @@ h2 {
 
 .wrpr-btn {
   width: 100%;
-  text-align: center;
+  @include glob.flex();
+
+  a {
+    @include glob.button(secondary);
+  }
 }
 
 .portrait {
