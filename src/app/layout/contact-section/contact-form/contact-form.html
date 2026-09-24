@@ -75,6 +75,6 @@
   </div>
 
   <div class="btn-wrpr">
-    <button type="submit">Send message</button>
+    <button [class.no-hover]="!contactForm.valid" type="submit">Send message</button>
   </div>
 </form>

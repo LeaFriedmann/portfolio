@@ -71,8 +71,16 @@ textarea {
 }
 
 .btn-wrpr {
+  margin-top: 16px;
   width: 100%;
   @include glob.flex();
+  button {
+    @include glob.button(submit);
+  }
+  .no-hover {
+    color: gray;
+    border-color: gray;
+  }
 }
 
 .errorWrapper {
