@@ -1,10 +1,10 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
 header {
+  height: glob.use-clamp(80, 10vh, 105);
   max-width: glob.px-to-rem(1440);
   background-color: glob.$cream;
   @include glob.flex(row, center, space-between, 0);
-  @include glob.padding(18, 3vw, 30, 8, 7vw, 100);
 
   position: sticky;
   top: 0;
