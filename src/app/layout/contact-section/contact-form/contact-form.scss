@@ -55,7 +55,6 @@ textarea {
   @include glob.flex(row, center, flex-start, 8);
   margin-top: glob.px-to-rem(16);
   margin-bottom: glob.px-to-rem(8);
-  //   padding: 8px;
 
   input {
     width: auto;
@@ -66,6 +65,12 @@ textarea {
 
     a {
       color: glob.$green;
+      
+      &:hover {
+        text-shadow:
+          0.3px 0 0 currentColor,
+          -0.3px 0 0 currentColor;
+      }
     }
   }
 }
