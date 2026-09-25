@@ -1,0 +1,27 @@
+@use '../../../../../public/assets/styles/all-styles' as glob;
+
+.socials {
+  @include glob.flex($direction: row, $align: center, $gap: 50, $justify: end);
+  height: glob.px-to-rem(50);
+  margin-right: glob.px-to-rem(12);
+
+  @include glob.mobile() {
+    gap: 30px;
+  }
+
+  a {
+    height: glob.px-to-rem(70);
+    @include glob.flex($justify: center);
+
+    &:hover img {
+      transition: 0.1s ease-out;
+      transform: translateY(-40%);
+    }
+  }
+
+  img {
+    height: glob.px-to-rem(30);
+    width: glob.px-to-rem(30);
+    transition: 0.1s ease-out;
+  }
+}
