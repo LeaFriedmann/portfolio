@@ -1,5 +1,9 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
+#my-skills {
+  scroll-margin-top: glob.$scroll-margin-top;
+}
+
 .skills {
   margin-top: glob.use-clamp(32, 10vw, 64);
   @include glob.padding(60, 7vw, 120, 16, 7vw, 115);

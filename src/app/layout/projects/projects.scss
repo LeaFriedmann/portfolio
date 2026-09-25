@@ -3,6 +3,7 @@
 .portfolio {
   width: 100%;
   @include glob.flex();
+  scroll-margin-top: glob.$scroll-margin-top;
 
   > p {
     width: glob.use-clamp(250, 60vw, 500);

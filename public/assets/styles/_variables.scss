@@ -1,3 +1,8 @@
+@use './functions' as func;
+
 $green: #00bc8f;
 $cream: #fffcf3;
 $red: #e61c40;
+
+$header-height: func.use-clamp(80, 10vh, 105);
+$scroll-margin-top: calc($header-height + func.px-to-rem(100));

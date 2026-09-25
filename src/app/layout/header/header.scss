@@ -1,7 +1,7 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
 header {
-  height: glob.use-clamp(80, 10vh, 105);
+  height: glob.$header-height;
   max-width: glob.px-to-rem(1440);
   background-color: glob.$cream;
   @include glob.flex(row, center, space-between, 0);
@@ -11,6 +11,7 @@ header {
   z-index: 1000;
 
   div {
-    @include glob.flex(row, center, center, 50);
+    width: glob.px-to-rem(200);
+    @include glob.flex(row, center, space-between, 50);
   }
 }
