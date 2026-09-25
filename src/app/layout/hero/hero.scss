@@ -1,7 +1,7 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
 .hero {
-  min-height: calc(100svh - 102px);
+  min-height: calc(100vh - glob.$header-height);
   @include glob.flex();
   h1 {
     text-align: center;
