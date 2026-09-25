@@ -1,0 +1,98 @@
+@use '../../../../public/assets/styles/all-styles' as glob;
+
+footer {
+  // Prevents 1px gap below the clipped contact section
+  margin-top: -1px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  @include glob.font-overpass(regular, 18, 2vw, 22);
+  padding-bottom: glob.px-to-rem(16);
+  padding-top: glob.px-to-rem(32);
+
+  .section-top {
+    width: 100%;
+    @include glob.flex($direction: row, $justify: space-between);
+
+    @include glob.small-mobile() {
+      flex-direction: column-reverse;
+      gap: glob.px-to-rem(16);
+    }
+
+    .logo-name {
+      @include glob.flex($align: start, $gap: 6);
+
+      @include glob.small-mobile() {
+        align-items: center;
+        gap: glob.px-to-rem(16);
+      }
+    }
+
+    .socials {
+      @include glob.flex($direction: row, $align: center, $gap: 50, $justify: end);
+      height: glob.px-to-rem(50);
+      margin-right: glob.px-to-rem(12);
+
+      a {
+        height: glob.px-to-rem(70);
+        @include glob.flex($justify: center);
+
+        &:hover img {
+          transition: 0.1s ease-out;
+          transform: translateY(-40%);
+        }
+      }
+
+      img {
+        height: glob.px-to-rem(30);
+        width: glob.px-to-rem(30);
+        transition: 0.1s ease-out;
+      }
+    }
+  }
+
+  .legal-notice-wrapper {
+    @include glob.flex($align: end);
+
+    @include glob.small-mobile() {
+      align-items: center;
+      padding: glob.px-to-rem(16);
+    }
+
+    .container {
+      width: glob.px-to-rem(100);
+      @include glob.flex($align: start);
+
+      @include glob.small-mobile() {
+        align-items: center;
+      }
+
+      &:hover {
+        transition: 0.1s ease;
+        font-weight: bold;
+        .legal-notice {
+          transform: translateX(10%);
+          transition: 0.1s ease;
+        }
+
+        .line {
+          transform: translateX(65%);
+          transition: 0.1s ease-in-out;
+          opacity: 1;
+        }
+      }
+
+      .legal-notice {
+        font-size: glob.px-to-rem(16);
+      }
+
+      .line {
+        height: 2px;
+        width: glob.px-to-rem(60);
+        background-color: glob.$green;
+        opacity: 0;
+        transition: 0.1s ease-in-out;
+      }
+    }
+  }
+}
