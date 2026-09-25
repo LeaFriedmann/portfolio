@@ -27,5 +27,11 @@ h2 {
 
   a {
     color: glob.$green;
+
+    &:hover {
+      text-shadow:
+        0.3px 0 0 currentColor,
+        -0.3px 0 0 currentColor;
+    }
   }
 }
