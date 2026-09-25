@@ -24,6 +24,10 @@
         min-width: glob.px-to-rem(260);
         max-width:glob.px-to-rem(400);
 
+        &:hover{
+          border-color: glob.$green;
+        }
+
         >img{
         margin-top: glob.px-to-rem(14);
 
