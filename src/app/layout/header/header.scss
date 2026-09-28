@@ -13,5 +13,10 @@ header {
   div {
     width: glob.px-to-rem(200);
     @include glob.flex(row, center, space-between, 50);
+
+    @include glob.small-mobile() {
+      width: glob.px-to-rem(170);
+      gap: glob.px-to-rem(30);
+    }
   }
 }

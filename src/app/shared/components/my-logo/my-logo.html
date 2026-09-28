@@ -1,1 +1,7 @@
-<a href="#hero">[LF]</a>
+<a href="#hero">
+  @if (logoColor() == 'white') {
+    <img src="./assets/images/logo-white.svg" alt="logo" />
+  } @else if (logoColor() == 'black') {
+    <img src="./assets/images/logo-black.svg" alt="logo" />
+  }
+</a>

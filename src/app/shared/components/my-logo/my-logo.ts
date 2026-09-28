@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, InputSignal } from '@angular/core';
 
 @Component({
   selector: 'my-logo',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './my-logo.html',
   styleUrl: './my-logo.scss',
 })
-export class MyLogo {}
+export class MyLogo {
+  logoColor: InputSignal<'white' | 'black'> = input.required<'white' | 'black'>();
+}

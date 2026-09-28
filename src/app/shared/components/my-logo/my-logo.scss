@@ -1,0 +1,7 @@
+@use '../../../../../public/assets/styles/all-styles' as glob;
+
+img {
+  @include glob.small-mobile() {
+    height: 25px;
+  }
+}

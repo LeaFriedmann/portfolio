@@ -7,6 +7,11 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include glob.small-mobile(){
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .animation-open {
