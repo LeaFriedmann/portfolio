@@ -47,10 +47,52 @@ h2 {
   }
 }
 
-.portrait {
+.portrait-wrapper {
   width: glob.use-clamp(260, 40vw, 550);
+  height: glob.use-clamp(260, 40vw, 550);
+  aspect-ratio: 1/1;
+  padding: 16px;
+
+  &::after {
+    content: '';
+    width: 120px;
+    height: 200px;
+    border-bottom: 3px black solid;
+    border-left: 3px black solid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    @include glob.small-mobile() {
+      height: 160px;
+      width: 80px;
+    }
+  }
+
+  &::before {
+    content: '';
+    width: 120px;
+    height: 200px;
+    border-top: 3px black solid;
+    border-right: 3px black solid;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include glob.small-mobile() {
+      height: 160px;
+      width: 80px;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
 
   @include glob.mobile() {
     width: glob.use-clamp(260, 100%, 550);
+    height: glob.use-clamp(260, 100%, 550);
+    aspect-ratio: 1/1;
   }
 }
