@@ -1,5 +1,9 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
+#contact-me {
+  scroll-margin-top: glob.$scroll-margin-top;
+}
+
 .contact-section {
   padding-top: glob.px-to-rem(100);
   width: 100%;

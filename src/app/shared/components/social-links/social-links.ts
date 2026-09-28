@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'social-links',
@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './social-links.html',
   styleUrl: './social-links.scss',
 })
-export class SocialLinks {}
+export class SocialLinks {
+  @Output() contactClicked = new EventEmitter<void>();
+}
