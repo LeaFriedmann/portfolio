@@ -14,6 +14,12 @@
     &__icon {
       margin: glob.px-to-rem(10);
       height: glob.use-clamp(60, 10vw, 75);
+      transition: 1s;
+
+      &:hover {
+        transition: 1s;
+        transform: rotateY(360deg);
+      }
     }
     &__name {
       @include glob.font-overpass(bold, 16, 16px, 16);
