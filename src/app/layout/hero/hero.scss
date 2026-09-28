@@ -1,5 +1,9 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
+#hero {
+  scroll-margin-top: glob.$scroll-margin-top;
+}
+
 .hero {
   min-height: calc(100vh - glob.$header-height);
   @include glob.flex();
