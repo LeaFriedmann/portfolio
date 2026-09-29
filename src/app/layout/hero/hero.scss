@@ -8,6 +8,7 @@
   min-height: calc(100vh - glob.$header-height);
   @include glob.flex();
   width: 100%;
+  margin-bottom: glob.px-to-rem(50);
 
   .content-wrapper {
     min-height: calc(100vh - glob.$header-height);
