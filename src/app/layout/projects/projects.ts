@@ -10,7 +10,7 @@ export class Projects {
   myProjects: { name: string; skills: string; description: string; imgUrl: string; gitHubUrl: string; liveUrl: string }[] = [
     {
       name: 'Join',
-      skills: 'Angular | Typescript | HTML | CSS | Firebase',
+      skills: 'Angular | Typescript | HTML | CSS | Supabase',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       imgUrl: './assets/images/join-img.png',
@@ -18,10 +18,10 @@ export class Projects {
       liveUrl: '/angular-projects/join',
     },
     {
-      name: 'Sharkie',
+      name: 'El Pollo loco',
       skills: 'JavaScript | HTML | CSS',
       description:
-        'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
+        'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the chicken.',
       imgUrl: './assets/images/pollo-loco-img.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/El-pollo-loco.git',
       liveUrl: '/El pollo loco/',
