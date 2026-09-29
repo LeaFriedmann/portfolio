@@ -2,11 +2,12 @@ import { Component, computed, inject, signal, WritableSignal } from '@angular/co
 import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { minLengthWithoutSpaces } from '../../../shared/validators/min-length-without-spaces/min-length-without-spaces';
 import { advancedEmailValidator } from '../../../shared/validators/email-validator';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'contact-form',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterLink],
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.scss',
 })

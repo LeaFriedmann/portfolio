@@ -1,0 +1,12 @@
+@use '../../../../public/assets/styles/all-styles' as glob;
+
+.section-legal-notice {
+  @include glob.font-overpass(regular, 16, 16px, 16);
+  margin-bottom: 30px;
+
+  h3 {
+    color: glob.$green;
+    @include glob.font-overpass(bold, 20, 20px, 20);
+    margin-top: 30px;
+  }
+}
