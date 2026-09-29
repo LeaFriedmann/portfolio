@@ -7,29 +7,40 @@
 .hero {
   min-height: calc(100vh - glob.$header-height);
   @include glob.flex();
-  h1 {
-    text-align: center;
-    @include glob.font-syne(x-bold, 32, 10vw, 128);
-  }
+  width: 100%;
 
-  &--heading {
-    @include glob.flex(row, center, center, 24);
+  .content-wrapper {
+    min-height: calc(100vh - glob.$header-height);
+    @include glob.flex($justify: space-evenly, $align: flex-start, $gap: 50);
 
-    .line {
-      height: 4px;
-      width: glob.use-clamp(130, 47vw, 690);
-      // width: clamp(130px, 45vw, 675px);
-      background-color: black;
+    h1 {
+      text-align: center;
+      @include glob.font-syne(x-bold, 32, 10vw, 128);
     }
 
-    p {
-      color: glob.$green;
-      @include glob.font-overpass(bold, 18, 5vw, 48);
-    }
-  }
+    .heading {
+      @include glob.flex(row, center, center, 24);
 
-  &--mail-arrow {
-    width: 100%;
-    @include glob.flex(row, flex-end, space-between, 0);
+      .line {
+        height: 4px;
+        width: glob.use-clamp(130, 47vw, 690);
+        // width: clamp(130px, 45vw, 675px);
+        background-color: black;
+      }
+
+      p {
+        color: glob.$green;
+        @include glob.font-overpass(bold, 18, 5vw, 48);
+      }
+    }
+
+    .bottom-part {
+      width: 100%;
+
+      .mail-arrow {
+        width: 100%;
+        @include glob.flex(row, flex-end, space-between, 0);
+      }
+    }
   }
 }

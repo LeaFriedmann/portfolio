@@ -3,6 +3,7 @@
 .section-legal-notice {
   @include glob.font-overpass(regular, 16, 16px, 16);
   margin-bottom: 30px;
+  @include glob.flex();
 
   h3 {
     color: glob.$green;

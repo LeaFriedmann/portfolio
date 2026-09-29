@@ -2,6 +2,7 @@
 
 #my-skills {
   scroll-margin-top: glob.$scroll-margin-top;
+  @include glob.flex();
 }
 
 .skills {

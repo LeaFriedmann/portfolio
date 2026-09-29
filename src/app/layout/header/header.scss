@@ -2,15 +2,18 @@
 
 header {
   height: glob.$header-height;
-  max-width: glob.px-to-rem(1440);
   background-color: glob.$cream;
-  @include glob.flex(row, center, space-between, 0);
+  @include glob.flex();
 
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  div {
+  .content-wrapper {
+    @include glob.flex(row, center, space-between, 0);
+  }
+
+  .right-part {
     width: glob.px-to-rem(200);
     @include glob.flex(row, center, space-between, 50);
 

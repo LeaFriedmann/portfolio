@@ -15,13 +15,13 @@
   border: initial;
 }
 
-html {
+html:not(:has(.menu.closed-menu)) {
   scrollbar-gutter: stable;
 }
 
 body {
   background-color: glob.$cream;
-  @include glob.flex();
+  min-height: 100%;
 }
 
 // prevent background scroll when menu is open
@@ -29,12 +29,10 @@ body:not(:has(.menu.closed-menu)) {
   overflow: hidden;
 }
 
-main {
-  max-width: glob.px-to-rem(1440);
-}
-
-.section-padding {
+.section-settings {
   padding: 0 glob.use-clamp(16, 6vw, 100);
+  max-width: glob.$content-max-width;
+  width: 100%;
 }
 
 h2 {

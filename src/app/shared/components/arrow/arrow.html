@@ -1,7 +1,9 @@
-<section class="arrow-section section-padding" [class.arrow-section--mirrored]="arrowMirrored()">
-  <div #arrow class="arrow-animation" [class.animate]="animate()" [class.arrow-animation--mirrored]="arrowMirrored()">
-    <img class="frame frame__1" src="./assets/images/arrow-default.png" alt="arrow" />
-    <img class="frame frame__2" src="./assets/images/arrow-animate.png" alt="arrow" />
-    <img class="frame frame__3" src="./assets/images/arrow-after.png" alt="arrow" />
+<section class="arrow-section">
+  <div class="content-wrapper section-settings" [class.content-wrapper--mirrored]="arrowMirrored()">
+    <div #arrow class="arrow-animation" [class.animate]="animate()" [class.arrow-animation--mirrored]="arrowMirrored()">
+      <img class="frame frame__1" src="./assets/images/arrow-default.png" alt="arrow" />
+      <img class="frame frame__2" src="./assets/images/arrow-animate.png" alt="arrow" />
+      <img class="frame frame__3" src="./assets/images/arrow-after.png" alt="arrow" />
+    </div>
   </div>
 </section>

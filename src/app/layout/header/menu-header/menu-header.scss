@@ -8,7 +8,7 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  @include glob.small-mobile(){
+  @include glob.small-mobile() {
     width: 35px;
     height: 35px;
   }
@@ -69,10 +69,9 @@
   overscroll-behavior: none;
   transition: 0.3s ease;
 
-  .content-wrapper {
+  .content-box {
     height: 100%;
     width: 100%;
-    max-width: glob.px-to-rem(1440);
   }
 
   nav {
@@ -133,8 +132,7 @@
     width: 100%;
     background-color: black;
     color: glob.$cream;
-
-    @include glob.flex($justify: space-around);
+    @include glob.flex();
     clip-path: polygon(0 0, 100% 30%, 100% 100%, 0 100%);
 
     @include glob.tablet() {
@@ -147,16 +145,21 @@
       clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
     }
 
-    .wrapper-info {
-      width: 100%;
-      @include glob.flex($direction: row, $justify: space-between);
+    .content-wrapper {
+      height: 100%;
+      @include glob.flex($justify: space-around);
 
-      @include glob.small-mobile() {
-        flex-direction: column;
-      }
+      .wrapper-info {
+        width: 100%;
+        @include glob.flex($direction: row, $justify: space-between);
 
-      p {
-        @include glob.font-overpass(thin, 20, 2vw, 23);
+        @include glob.small-mobile() {
+          flex-direction: column;
+        }
+
+        p {
+          @include glob.font-overpass(thin, 20, 2vw, 23);
+        }
       }
     }
   }

@@ -5,6 +5,9 @@
   @include glob.flex();
   margin-top: glob.px-to-rem(120);
 
+  .content-wrapper{
+    @include glob.flex();
+
   > p {
     width: glob.use-clamp(250, 60vw, 650);
     text-align: center;
@@ -49,4 +52,6 @@
       }
     }
   }
+  }
+
 }

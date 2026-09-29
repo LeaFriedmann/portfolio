@@ -6,7 +6,6 @@
 
 .contact-section {
   padding-top: glob.px-to-rem(100);
-  width: 100%;
   background-color: black;
   @include glob.flex();
   clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
@@ -49,7 +48,7 @@
     }
   }
 
-  scroll-up-arrow{
+  scroll-up-arrow {
     position: absolute;
     right: glob.use-clamp(16, 6vw, 100);
     bottom: 0;

@@ -3,31 +3,34 @@
 .arrow-section {
   width: 100%;
   margin: glob.px-to-rem(36) 0;
-  display: flex;
-  justify-content: flex-end;
+  @include glob.flex();
 
-  &--mirrored {
-    justify-content: flex-start;
-  }
-
-  .arrow-animation {
-    position: relative;
-    width: glob.use-clamp(250, 25vw, 300);
-    aspect-ratio: 1 / 1;
+  .content-wrapper {
+    @include glob.flex($align: flex-end, $justify: flex-end);
 
     &--mirrored {
-      transform: scaleX(-1);
+      @include glob.flex($align: flex-start, $justify: flex-start);
     }
 
-    .frame {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
+    .arrow-animation {
+      position: relative;
+      width: glob.use-clamp(250, 25vw, 300);
+      aspect-ratio: 1 / 1;
 
-      &__1 {
-        opacity: 1;
+      &--mirrored {
+        transform: scaleX(-1);
+      }
+
+      .frame {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        &__1 {
+          opacity: 1;
+        }
       }
     }
   }

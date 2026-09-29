@@ -2,6 +2,7 @@
 
 #about-me {
   scroll-margin-top: glob.$scroll-margin-top;
+  @include glob.flex();
 }
 
 h2 {
