@@ -58,7 +58,7 @@
   <div class="errorWrapper">
     @if (message?.hasError('required') && message?.touched) {
       <p class="error">Your message is empty</p>
-    } @else if (message?.hasError('stringTooShort')) {
+    } @else if (message?.hasError('stringTooShort') && message?.touched) {
       <p class="error">Please type in at least 10 characters</p>
     }
   </div>
