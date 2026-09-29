@@ -13,7 +13,7 @@ export class Projects {
       skills: 'Angular | Typescript | HTML | CSS | Supabase',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-      imgUrl: './assets/images/join-img.png',
+      imgUrl: './assets/images/join-preview.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/join.git',
       liveUrl: '/angular-projects/join',
     },
@@ -22,7 +22,7 @@ export class Projects {
       skills: 'JavaScript | HTML | CSS',
       description:
         'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the chicken.',
-      imgUrl: './assets/images/pollo-loco-img.png',
+      imgUrl: './assets/images/el-pollo-loco-privew.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/El-pollo-loco.git',
       liveUrl: '/El pollo loco/',
     },
@@ -30,7 +30,7 @@ export class Projects {
       name: 'Pokedex',
       skills: 'JavaScript | HTML | CSS | Api',
       description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      imgUrl: './assets/images/pokedex-img.png',
+      imgUrl: './assets/images/pokedex-preview.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/Pokedex.git',
       liveUrl: '/Pokedex/',
     },
