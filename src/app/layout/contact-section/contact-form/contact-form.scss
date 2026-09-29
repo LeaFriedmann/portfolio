@@ -13,7 +13,7 @@ form {
   border-top: 2px transparent solid;
   margin-top: glob.px-to-rem(16);
   margin-bottom: glob.px-to-rem(8);
-  padding: glob.px-to-rem(12) glob.px-to-rem(8) glob.px-to-rem(6) glob.px-to-rem(8);
+  padding: glob.px-to-rem(10) glob.px-to-rem(10) glob.px-to-rem(4) glob.px-to-rem(8);
 
   &--primary {
     &:hover {
@@ -39,7 +39,7 @@ form {
 
 input,
 textarea {
-  width: glob.use-clamp(200, 100%, 600);
+  width: glob.use-clamp(200, 100%, 650);
   outline: none;
 
   &:focus {
@@ -49,6 +49,7 @@ textarea {
 
 textarea {
   min-height: glob.px-to-rem(100);
+  max-width: glob.use-clamp(200, 100%, 650);
 }
 
 .checkbox {
