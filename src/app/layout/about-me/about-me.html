@@ -1,24 +1,63 @@
 <section id="about-me">
   <div class="section-settings">
-    <h2>About me</h2>
+    <h2>
+      @if (language.langSetting() == 'en') {
+        About me
+      }
+      @if (language.langSetting() == 'de') {
+        Über mich
+      }
+    </h2>
     <div class="wrapper-content">
       <section class="text-part text-regular">
         <p>
-          I’m a passionate web developer who enjoys turning ideas into practical and creative solutions. I’m naturally curious and like understanding not only how something works, but also why it works the way it does. I pay attention to details and enjoy experimenting with different ideas until I find an approach that feels right. At the same time, I appreciate working in a team, exchanging ideas, and learning from the people around me.
-
+          @if (language.langSetting() == 'en') {
+            I’m a passionate web developer who enjoys turning ideas into practical and creative solutions. I’m naturally curious and like
+            understanding not only how something works, but also why it works the way it does. I pay attention to details and enjoy
+            experimenting with different ideas until I find an approach that feels right. At the same time, I appreciate working in a team,
+            exchanging ideas, and learning from the people around me.
+          }
+          @if (language.langSetting() == 'de') {
+            Ich bin eine leidenschaftliche Webentwicklerin und habe Freude daran, Ideen in praktische und kreative Lösungen zu verwandeln.
+            Ich bin von Natur aus neugierig und möchte nicht nur verstehen, wie etwas funktioniert, sondern auch, warum es auf diese Weise
+            funktioniert. Dabei achte ich auf Details und probiere gerne verschiedene Ansätze aus, bis ich die Lösung gefunden habe, die
+            sich für mich richtig anfühlt. Gleichzeitig schätze ich die Zusammenarbeit im Team, den Austausch von Ideen und die Möglichkeit,
+            von den Menschen um mich herum zu lernen.
+          }
         </p>
         <div class="wrapper-icons">
           <div class="icon-and-text">
             <img src="./assets/images/house-icon.png" alt="icon house" />
-            <p>Based in Freiburg im Breisgau</p>
+            <p>
+              @if (language.langSetting() == 'en') {
+                Based in Freiburg im Breisgau
+              }
+              @if (language.langSetting() == 'de') {
+                Aus Freiburg im Breisgau
+              }
+            </p>
           </div>
           <div class="icon-and-text">
             <img src="./assets/images/laptop-icon.png" alt="icon laptop" />
-            <p>Open to work Remote</p>
+            <p>
+              @if (language.langSetting() == 'en') {
+                Open to work Remote
+              }
+              @if (language.langSetting() == 'de') {
+                Remote verfügbar
+              }
+            </p>
           </div>
         </div>
         <div class="wrpr-btn">
-          <a href="#contact-me">Let's talk</a>
+          <a href="#contact-me">
+            @if (language.langSetting() == 'en') {
+              Let's talk
+            }
+            @if (language.langSetting() == 'de') {
+              Schreib mir
+            }
+          </a>
         </div>
       </section>
       <section class="portrait-wrapper">
