@@ -4,13 +4,34 @@
 <section class="menu" [class.closed-menu]="menuClosed">
   <div class="content-box">
     <nav>
-      <a class="menu-link" href="#about-me" (click)="toggleMenu()">About me</a>
-      <a class="menu-link" href="#my-skills" (click)="toggleMenu()">My skills</a>
+      <a class="menu-link" href="#about-me" (click)="toggleMenu()">
+        @if (language.langSetting() == 'en') {
+          About me
+        }
+        @if (language.langSetting() == 'de') {
+          Über mich
+        }
+      </a>
+      <a class="menu-link" href="#my-skills" (click)="toggleMenu()">
+        @if (language.langSetting() == 'en') {
+          My skills
+        }
+        @if (language.langSetting() == 'de') {
+          Meine Skills
+        }
+      </a>
       <a class="menu-link" href="#portfolio" (click)="toggleMenu()">Portfolio</a>
     </nav>
     <div class="bottom-part">
       <div class="content-wrapper section-settings">
-        <h2>Say Hi!</h2>
+        <h2>
+          @if (language.langSetting() == 'en') {
+            Say Hi!
+          }
+          @if (language.langSetting() == 'de') {
+            Schreib mir!
+          }
+        </h2>
         <div class="wrapper-info">
           <p>friedmann.lea@web.de</p>
           <social-links (contactClicked)="toggleMenu()"></social-links>

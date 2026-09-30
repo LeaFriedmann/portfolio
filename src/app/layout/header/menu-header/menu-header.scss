@@ -80,7 +80,7 @@
 
     .menu-link {
       @include glob.font-syne(bold, 40, 9vw, 96);
-      width: glob.use-clamp(270, 60vw, 600);
+      width: glob.use-clamp(290, 70vw, 670);
       text-align: center;
       padding-bottom: glob.px-to-rem(16);
 
