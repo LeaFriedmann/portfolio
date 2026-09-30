@@ -3,7 +3,7 @@
 .btn-img {
   width: 45px;
   height: 45px;
-  background-image: url(/assets/images/menu-icon.png);
+  background-image: url(../../../../../public/assets/images/menu-icon.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,37 +24,37 @@
 
 @keyframes menu-close {
   0% {
-    background-image: url('/assets/images/menu-transition-3.png');
+    background-image: url('../../../../../public/assets/images/menu-transition-3.png');
   }
 
   33% {
-    background-image: url('/assets/images/menu-transition-2.png');
+    background-image: url('../../../../../public/assets/images/menu-transition-2.png');
   }
 
   66% {
-    background-image: url('/assets/images/menu-transition-1.png');
+    background-image: url('../../../../../public/assets/images/menu-transition-1.png');
   }
 
   100% {
-    background-image: url('/assets/images/menu-icon.png');
+    background-image: url('../../../../../public/assets/images/menu-icon.png');
   }
 }
 
 @keyframes menu-open {
   0% {
-    background-image: url('/assets/images/menu-transition-1.png');
+    background-image: url('../../../../../public/assets/images/menu-transition-1.png');
   }
 
   33% {
-    background-image: url('/assets/images/menu-transition-2.png');
+    background-image: url('../../../../../public/assets/images/menu-transition-2.png');
   }
 
   66% {
-    background-image: url('/assets/images/menu-transition-3.png');
+    background-image: url('../../../../../public/assets/images/menu-transition-3.png');
   }
 
   100% {
-    background-image: url('/assets/images/close-button.png');
+    background-image: url('../../../../../public/assets/images/close-button.png');
   }
 }
 
