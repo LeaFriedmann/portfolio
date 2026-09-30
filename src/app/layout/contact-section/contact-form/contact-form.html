@@ -168,7 +168,12 @@
 
   <div class="btn-wrpr">
     <button [class.no-hover]="!contactForm.valid" [disabled]="mailStatus() === 'sending'" type="submit">
-      {{ mailStatus() === 'sending' ? 'Sending...' : 'Send message' }}
+      @if (language.langSetting() == 'en') {
+        {{ mailStatus() === 'sending' ? 'Sending...' : 'Send message' }}
+      }
+      @if (language.langSetting() == 'de') {
+        {{ mailStatus() === 'sending' ? 'Senden...' : 'Nachricht senden' }}
+      }
     </button>
     @if (mailStatus() === 'success') {
       <p>
