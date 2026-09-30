@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillIcons } from './skill-icons/skill-icons';
+import { LanguageService } from '../../shared/services/language-service';
 
 @Component({
   selector: 'my-skills',
@@ -7,4 +8,6 @@ import { SkillIcons } from './skill-icons/skill-icons';
   templateUrl: './my-skills.html',
   styleUrl: './my-skills.scss',
 })
-export class MySkills {}
+export class MySkills {
+  language = inject(LanguageService);
+}

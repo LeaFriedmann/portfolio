@@ -1,11 +1,39 @@
 <section id="my-skills">
   <div class="section-settings">
     <div class="skills">
-      <h2>My skills</h2>
+      <h2>
+        @if (language.langSetting() == 'en') {
+          My skills
+        }
+        @if (language.langSetting() == 'de') {
+          Meine Skills
+        }
+      </h2>
       <skill-icons></skill-icons>
       <div class="contact-me text-regular">
         <img src="./assets/images/skill-icon.png" alt="skill icon" />
-        <p>Don't see the skill you need? <a href="#contact-me">Contact me</a> I'm always ready to learn!</p>
+        <p>
+          @if (language.langSetting() == 'en') {
+            Don't see the skill you need?
+          }
+          @if (language.langSetting() == 'de') {
+            Du findest nicht die Skills, die du brauchst?
+          }
+          <a href="#contact-me">
+            @if (language.langSetting() == 'en') {
+              Contact me
+            }
+            @if (language.langSetting() == 'de') {
+              Kontaktiere mich
+            }
+          </a>
+          @if (language.langSetting() == 'en') {
+            I'm always ready to learn!
+          }
+          @if (language.langSetting() == 'de') {
+            Ich lerne gerne Neues dazu!
+          }
+        </p>
       </div>
     </div>
   </div>
