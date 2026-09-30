@@ -24,7 +24,8 @@ export class Projects {
       skills: 'Angular | Typescript | HTML | CSS | Supabase',
       descriptionEn:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-      descriptionDe: 'Task-Manager nach dem Kanban-Prinzip. Aufgaben lassen sich per Drag-and-Drop erstellen und organisieren sowie Benutzern und Kategorien zuweisen.',
+      descriptionDe:
+        'Task-Manager nach dem Kanban-Prinzip. Aufgaben lassen sich per Drag-and-Drop erstellen und organisieren sowie Benutzern und Kategorien zuweisen.',
       imgUrl: './assets/images/join-preview.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/join.git',
       liveUrl: '/angular-projects/join',
@@ -34,7 +35,8 @@ export class Projects {
       skills: 'JavaScript | HTML | CSS',
       descriptionEn:
         'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the chicken.',
-      descriptionDe: 'Ein kleines Jump-and-Run-Spiel auf Basis objektorientierter Programmierung. Hilf Pepe, Münzen und Salsa-Flaschen zu sammeln und sich gegen das Huhn zu behaupten.',
+      descriptionDe:
+        'Ein kleines Jump-and-Run-Spiel auf Basis objektorientierter Programmierung. Hilf Pepe, Münzen und Salsa-Flaschen zu sammeln und sich gegen das Huhn zu behaupten.',
       imgUrl: './assets/images/el-pollo-loco-privew.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/El-pollo-loco.git',
       liveUrl: '/El pollo loco/',
