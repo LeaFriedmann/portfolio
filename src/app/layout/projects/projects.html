@@ -1,7 +1,14 @@
 <section id="portfolio" class="portfolio">
   <div class="content-wrapper section-settings">
     <h2>Portfolio</h2>
-    <p class="text-regular">Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    <p class="text-regular">
+      @if (language.langSetting() == 'en') {
+        Explore a selection of my work here - Interact with projects to see my skills in action.
+      }
+      @if (language.langSetting() == 'de') {
+        Entdecke hier eine Auswahl meiner Projekte und erlebe meine Fähigkeiten direkt in der Praxis.
+      }
+    </p>
     <section class="wrpr-projects">
       @for (item of myProjects; track item.name; let projectNr = $index, nrProjects = $count; let secondaryStyle = $odd) {
         <div
@@ -17,7 +24,14 @@
             <div class="info">
               <h3>{{ item.name }}</h3>
               <p class="info__skills">{{ item.skills }}</p>
-              <p class="info__description">{{ item.description }}</p>
+              <p class="info__description">
+                @if (language.langSetting() == 'en') {
+                  {{ item.descriptionEn }}
+                }
+                @if (language.langSetting() == 'de') {
+                  {{ item.descriptionDe }}
+                }
+              </p>
               <div class="btn-wrapper">
                 <a class="btn-url" href="{{ item.gitHubUrl }}" target="_blank">Github</a>
                 <a class="btn-url" href="{{ item.liveUrl }}" target="_blank">Live</a>

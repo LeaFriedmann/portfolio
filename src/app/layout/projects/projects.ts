@@ -1,4 +1,5 @@
-import { Component, ElementRef, signal, viewChildren, WritableSignal } from '@angular/core';
+import { Component, ElementRef, inject, signal, viewChildren, WritableSignal } from '@angular/core';
+import { LanguageService } from '../../shared/services/language-service';
 
 @Component({
   selector: 'projects',
@@ -7,12 +8,23 @@ import { Component, ElementRef, signal, viewChildren, WritableSignal } from '@an
   styleUrl: './projects.scss',
 })
 export class Projects {
-  myProjects: { name: string; skills: string; description: string; imgUrl: string; gitHubUrl: string; liveUrl: string }[] = [
+  language = inject(LanguageService);
+
+  myProjects: {
+    name: string;
+    skills: string;
+    descriptionEn: string;
+    descriptionDe: string;
+    imgUrl: string;
+    gitHubUrl: string;
+    liveUrl: string;
+  }[] = [
     {
       name: 'Join',
       skills: 'Angular | Typescript | HTML | CSS | Supabase',
-      description:
+      descriptionEn:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      descriptionDe: 'Task-Manager nach dem Kanban-Prinzip. Aufgaben lassen sich per Drag-and-Drop erstellen und organisieren sowie Benutzern und Kategorien zuweisen.',
       imgUrl: './assets/images/join-preview.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/join.git',
       liveUrl: '/angular-projects/join',
@@ -20,8 +32,9 @@ export class Projects {
     {
       name: 'El Pollo loco',
       skills: 'JavaScript | HTML | CSS',
-      description:
+      descriptionEn:
         'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the chicken.',
+      descriptionDe: 'Ein kleines Jump-and-Run-Spiel auf Basis objektorientierter Programmierung. Hilf Pepe, Münzen und Salsa-Flaschen zu sammeln und sich gegen das Huhn zu behaupten.',
       imgUrl: './assets/images/el-pollo-loco-privew.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/El-pollo-loco.git',
       liveUrl: '/El pollo loco/',
@@ -29,7 +42,8 @@ export class Projects {
     {
       name: 'Pokedex',
       skills: 'JavaScript | HTML | CSS | Api',
-      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      descriptionEn: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      descriptionDe: 'Eine Pokémon-Bibliothek auf Basis der PokéAPI zum Abrufen und Katalogisieren von Pokémon-Informationen.',
       imgUrl: './assets/images/pokedex-preview.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/Pokedex.git',
       liveUrl: '/Pokedex/',
