@@ -3,7 +3,7 @@ import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { minLengthWithoutSpaces } from '../../../shared/validators/min-length-without-spaces/min-length-without-spaces';
 import { advancedEmailValidator } from '../../../shared/validators/email-validator';
 import { RouterLink } from '@angular/router';
-
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'contact-form',
@@ -14,6 +14,7 @@ import { RouterLink } from '@angular/router';
 export class ContactForm {
   //#region properties
   fb = inject(FormBuilder);
+  http = inject(HttpClient);
 
   nameFocused: WritableSignal<boolean> = signal(false);
   mailFocused: WritableSignal<boolean> = signal(false);
@@ -53,13 +54,36 @@ export class ContactForm {
   }
   //#endregion
 
+  mailStatus = signal<'idle' | 'sending' | 'success' | 'error'>('idle');
+
   formSubmit() {
-    if (this.contactForm.valid) {
-      console.log(this.contactForm.value);
-      this.contactForm.reset();
-    } else {
+    if (!this.contactForm.valid) {
       this.contactForm.markAllAsTouched();
+      return;
     }
+
+    this.mailStatus.set('sending');
+
+    const formData = {
+      name: this.name?.value,
+      email: this.email?.value,
+      message: this.message?.value,
+    };
+
+    console.log(formData);    
+
+    this.http.post('/angular-projects/portfolio/mail-service.php', formData).subscribe({
+      next: (response) => {
+        console.log('message sent successfully:', response);
+        this.mailStatus.set('success');
+        this.contactForm.reset();
+      },
+
+      error: (error) => {
+        console.error('message could not be sent, error while sending:', error);
+        this.mailStatus.set('error');
+      },
+    });
   }
 
   //#endregion

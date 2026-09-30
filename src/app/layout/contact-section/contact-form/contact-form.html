@@ -77,6 +77,13 @@
   </div>
 
   <div class="btn-wrpr">
-    <button [class.no-hover]="!contactForm.valid" type="submit">Send message</button>
+    <button [class.no-hover]="!contactForm.valid" [disabled]="mailStatus() === 'sending'" type="submit">
+      {{ mailStatus() === 'sending' ? 'Sending...' : 'Send message' }}
+    </button>
+    @if (mailStatus() === 'success') {
+      <p>Thank you! Your message has been sent!</p>
+    } @else if (mailStatus() === 'error') {
+      <p>Something went wrong. Please try again.</p>
+    }
   </div>
 </form>
