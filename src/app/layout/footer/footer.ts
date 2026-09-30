@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SocialLinks } from '../../shared/components/social-links/social-links';
 import { MyLogo } from '../../shared/components/my-logo/my-logo';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../shared/services/language-service';
 
 @Component({
   selector: 'app-footer',
@@ -9,4 +10,6 @@ import { RouterLink } from '@angular/router';
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
-export class Footer {}
+export class Footer {
+  language = inject(LanguageService);
+}

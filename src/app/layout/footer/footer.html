@@ -9,7 +9,14 @@
     </section>
     <section class="legal-notice-wrapper">
       <div class="container">
-        <a class="legal-notice" routerLink="legal-notice">Legal notice</a>
+        <a class="legal-notice" routerLink="legal-notice">
+          @if (language.langSetting() == 'en') {
+            Legal notice
+          }
+          @if (language.langSetting() == 'de') {
+            Impressum
+          }
+        </a>
         <div class="line"></div>
       </div>
     </section>
