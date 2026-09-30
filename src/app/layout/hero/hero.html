@@ -1,7 +1,14 @@
 <section class="hero" id="hero">
   <div class="section-settings content-wrapper">
     <section>
-      <h1>Frontend Developer</h1>
+      <h1>
+        @if (language.langSetting() == 'en') {
+          Frontend Developer
+        }
+        @if (language.langSetting() == 'de') {
+          Frontend Entwicklerin
+        }
+      </h1>
       <div class="heading">
         <div class="line"></div>
         <p>Lea Friedmann</p>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../../shared/services/language-service';
 
 @Component({
   selector: 'arrow-down',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './arrow-down.html',
   styleUrl: './arrow-down.scss',
 })
-export class ArrowDown {}
+export class ArrowDown {
+  language = inject(LanguageService);
+}

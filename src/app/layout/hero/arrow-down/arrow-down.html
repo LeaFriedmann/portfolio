@@ -2,7 +2,21 @@
   <div class="arrow-box">
     <img class="arrow" src="./assets/images/arrow-down.png" alt="arrow down icon" />
   </div>
-  <p>Scroll</p>
+  <p>
+    @if (language.langSetting() == 'en') {
+      Scroll
+    }
+    @if (language.langSetting() == 'de') {
+      Mehr
+    }
+  </p>
   <br />
-  <p>Down</p>
+  <p>
+    @if (language.langSetting() == 'en') {
+      Down
+    }
+    @if (language.langSetting() == 'de') {
+      erfahren
+    }
+  </p>
 </div>
