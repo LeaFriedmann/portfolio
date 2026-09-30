@@ -1,4 +1,5 @@
-import { Component, signal, computed, WritableSignal } from '@angular/core';
+import { Component, signal, computed, WritableSignal, Inject, inject } from '@angular/core';
+import { LanguageService } from '../../../shared/services/language-service';
 
 @Component({
   selector: 'language-btns',
@@ -7,5 +8,5 @@ import { Component, signal, computed, WritableSignal } from '@angular/core';
   styleUrl: './language-btns.scss',
 })
 export class LanguageBtns {
-  language: WritableSignal<'de' | 'en'> = signal('de');
+  language = inject(LanguageService);
 }
