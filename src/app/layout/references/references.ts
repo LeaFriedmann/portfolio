@@ -9,22 +9,16 @@ import { Component } from '@angular/core';
 export class References {
   referenceList: { name: string; role: string; reference: string }[] = [
     {
-      name: 'A. Renhard',
+      name: 'J. Nell',
       role: 'Team Partner',
       reference:
-        'Michael really kept the team together with his great organization and clear communication. We wouldn`t have got this far without his commitment',
+        'It was a pleasure working with Lea. She was always a reliable and supportive team member who brought a positive attitude to our projects. Her clear communication, willingness to help others, and structured approach made collaboration easy and enjoyable. She was always open to new ideas and contributed valuable input during discussions and brainstorming sessions.',
     },
     {
-      name: 'B. Weiß',
-      role: 'Frontend Engineer',
-      reference:
-        'Michi was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.',
-    },
-    {
-      name: 'H. Oldinger',
+      name: 'D. Gengel',
       role: 'Team Partner',
       reference:
-        'It was a great pleasure to work with Michael. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well',
+        'Lea was a great colleague to work with. She consistently showed commitment and took responsibility for her tasks, while also being willing to support the team whenever needed. I especially appreciated her curiosity and motivation to learn new things and improve her skills. Her positive attitude and friendly personality made her a valuable part of our team.',
     },
   ];
 }
