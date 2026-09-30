@@ -1,9 +1,30 @@
 <section id="contact-me" class="contact-section">
   <div class="section-settings">
-    <h2>Say Hi!</h2>
+    <h2>
+      @if (language.langSetting() == 'en') {
+        Say Hi!
+      }
+      @if (language.langSetting() == 'de') {
+        Schreib mir!
+      }
+    </h2>
     <div class="form-wrapper">
-      <h3>Want to discuss a new project?</h3>
-      <p>Say hello! let's discuss your ideas and make it happen</p>
+      <h3>
+        @if (language.langSetting() == 'en') {
+          Want to discuss a new project?
+        }
+        @if (language.langSetting() == 'de') {
+          Du möchtest ein neues Projekt besprechen?
+        }
+      </h3>
+      <p>
+        @if (language.langSetting() == 'en') {
+          Say hello! let's discuss your ideas and make it happen.
+        }
+        @if (language.langSetting() == 'de') {
+          Schreib mir gerne! Lass uns deine Ideen gemeinsam besprechen und sie verwirklichen.
+        }
+      </p>
       <contact-form></contact-form>
     </div>
     <scroll-up-arrow></scroll-up-arrow>

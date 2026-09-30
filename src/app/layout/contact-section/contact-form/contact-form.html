@@ -2,25 +2,56 @@
   <div class="border" [class.border--primary]="!nameFocused()" [class.border--focused]="nameFocused()">
     <label for="YourName" [class.border-touched]="nameFocused()">
       @if (nameFocused()) {
-        Your name
+        @if (language.langSetting() == 'en') {
+          Your name
+        }
+        @if (language.langSetting() == 'de') {
+          Dein Name
+        }
       }
     </label>
     <input id="YourName" type="text" formControlName="name" (focus)="nameFocused.set(true)" placeholder="{{ placeHolderName() }}" />
   </div>
   <div class="errorWrapper">
     @if (name?.hasError('required') && name?.touched) {
-      <p class="error">Your Name is required</p>
+      <p class="error">
+        @if (language.langSetting() == 'en') {
+          Your Name is required
+        }
+        @if (language.langSetting() == 'de') {
+          Bitte gib deinen Namen ein
+        }
+      </p>
     } @else if (name?.hasError('stringTooShort') && name?.touched) {
-      <p class="error">Please enter at least three characters</p>
+      <p class="error">
+        @if (language.langSetting() == 'en') {
+          Please enter at least three characters
+        }
+        @if (language.langSetting() == 'de') {
+          Bitte gib mindestens drei Zeichen ein
+        }
+      </p>
     } @else if (name?.hasError('pattern') && name?.touched) {
-      <p class="error">Please use only letters and valid name characters</p>
+      <p class="error">
+        @if (language.langSetting() == 'en') {
+          Please use only letters and valid name characters
+        }
+        @if (language.langSetting() == 'de') {
+          Bitte verwende nur Buchstaben und gültige Namenszeichen
+        }
+      </p>
     }
   </div>
 
   <div class="border" [class.border--primary]="!mailFocused()" [class.border--focused]="mailFocused()">
     <label for="mail">
       @if (mailFocused()) {
-        Your email
+        @if (language.langSetting() == 'en') {
+          Your email
+        }
+        @if (language.langSetting() == 'de') {
+          Deine E-Mail-Adresse
+        }
       }
     </label>
     <input id="mail" type="text" formControlName="email" (focus)="mailFocused.set(true)" placeholder="{{ placeHolderEmail() }}" />
@@ -34,16 +65,35 @@
         email?.hasError('adjacentSpecialCharacters')) &&
       email?.touched
     ) {
-      <p class="error">Please use a valid E-Mail adress</p>
+      <p class="error">
+        @if (language.langSetting() == 'en') {
+          Please use a valid E-Mail adress
+        }
+        @if (language.langSetting() == 'de') {
+          Bitte gib eine gültige E-Mail-Adresse ein
+        }
+      </p>
     } @else if (!email?.valid && email?.touched) {
-      <p class="error">Your E-Mail is required</p>
+      <p class="error">
+        @if (language.langSetting() == 'en') {
+          Your E-Mail is required
+        }
+        @if (language.langSetting() == 'de') {
+          Bitte gib deine E-Mail-Adresse ein
+        }
+      </p>
     }
   </div>
 
   <div class="border" [class.border--primary]="!messageFocused()" [class.border--focused]="messageFocused()">
     <label for="message">
       @if (messageFocused()) {
-        Your message
+        @if (language.langSetting() == 'en') {
+          Your message
+        }
+        @if (language.langSetting() == 'de') {
+          Deine Nachricht
+        }
       }
     </label>
     <textarea
@@ -57,22 +107,62 @@
 
   <div class="errorWrapper">
     @if (message?.hasError('required') && message?.touched) {
-      <p class="error">Your message is empty</p>
+      <p class="error">
+        @if (language.langSetting() == 'en') {
+          Your message is empty
+        }
+        @if (language.langSetting() == 'de') {
+          Bitte gib eine Nachricht ein
+        }
+      </p>
     } @else if (message?.hasError('stringTooShort') && message?.touched) {
-      <p class="error">Please type in at least 10 characters</p>
+      <p class="error">
+        @if (language.langSetting() == 'en') {
+          Please type in at least 10 characters
+        }
+        @if (language.langSetting() == 'de') {
+          Bitte gib mindestens 10 Zeichen ein
+        }
+      </p>
     }
   </div>
 
   <div class="checkbox">
     <input id="check" type="checkbox" formControlName="checkbox" />
-    <label for="check"
-      >I've read the <a routerLink="privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</label
-    >
+    <label for="check">
+      @if (language.langSetting() == 'en') {
+        I've read the
+      }
+      @if (language.langSetting() == 'de') {
+        Ich habe die
+      }
+      <a routerLink="privacy-policy">
+        @if (language.langSetting() == 'en') {
+          privacy policy
+        }
+        @if (language.langSetting() == 'de') {
+          Datenschutzerklärung
+        }
+      </a>
+      @if (language.langSetting() == 'en') {
+        and agree to the processing of my data as outlined.
+      }
+      @if (language.langSetting() == 'de') {
+        gelesen und bin mit der darin beschriebenen Verarbeitung meiner Daten einverstanden.
+      }
+    </label>
   </div>
 
   <div class="errorWrapper">
     @if (!checkbox?.valid && checkbox?.touched) {
-      <p class="error">Please accept the privacy policy.</p>
+      <p class="error">
+        @if (language.langSetting() == 'en') {
+          Please accept the privacy policy.
+        }
+        @if (language.langSetting() == 'de') {
+          Bitte akzeptiere die Datenschutzerklärung
+        }
+      </p>
     }
   </div>
 
@@ -81,9 +171,23 @@
       {{ mailStatus() === 'sending' ? 'Sending...' : 'Send message' }}
     </button>
     @if (mailStatus() === 'success') {
-      <p>Thank you! Your message has been sent!</p>
+      <p>
+        @if (language.langSetting() == 'en') {
+          Thank you! Your message has been sent.
+        }
+        @if (language.langSetting() == 'de') {
+          Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.
+        }
+      </p>
     } @else if (mailStatus() === 'error') {
-      <p>Something went wrong. Please try again.</p>
+      <p>
+        @if (language.langSetting() == 'en') {
+          Something went wrong. Please try again.
+        }
+        @if (language.langSetting() == 'de') {
+          Etwas ist schiefgelaufen. Bitte versuche es erneut.
+        }
+      </p>
     }
   </div>
 </form>

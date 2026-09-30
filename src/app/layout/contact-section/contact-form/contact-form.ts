@@ -4,6 +4,7 @@ import { minLengthWithoutSpaces } from '../../../shared/validators/min-length-wi
 import { advancedEmailValidator } from '../../../shared/validators/email-validator';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { LanguageService } from '../../../shared/services/language-service';
 
 @Component({
   selector: 'contact-form',
@@ -15,15 +16,20 @@ export class ContactForm {
   //#region properties
   fb = inject(FormBuilder);
   http = inject(HttpClient);
+  language = inject(LanguageService);
 
   nameFocused: WritableSignal<boolean> = signal(false);
   mailFocused: WritableSignal<boolean> = signal(false);
   messageFocused: WritableSignal<boolean> = signal(false);
 
   // placeholder empty on focus
-  placeHolderName = computed(() => (this.nameFocused() ? '' : 'Your Name'));
-  placeHolderEmail = computed(() => (this.mailFocused() ? '' : 'Your email'));
-  placeHolderMessage = computed(() => (this.messageFocused() ? '' : 'Your message'));
+  placeHolderName = computed(() => (this.nameFocused() ? '' : this.language.langSetting() == 'en' ? 'Your Name' : 'Dein Name'));
+  placeHolderEmail = computed(() =>
+    this.mailFocused() ? '' : this.language.langSetting() == 'en' ? 'Your email' : 'Deine E-Mail-Adresse',
+  );
+  placeHolderMessage = computed(() =>
+    this.messageFocused() ? '' : this.language.langSetting() == 'en' ? 'Your message' : 'Deine Nachricht',
+  );
 
   contactForm = this.fb.group({
     name: ['', [Validators.required, minLengthWithoutSpaces(3), Validators.pattern(/^[\p{L}\p{M}]+(?:[ '’-][\p{L}\p{M}]+)*$/u)]],
@@ -70,7 +76,7 @@ export class ContactForm {
       message: this.message?.value,
     };
 
-    console.log(formData);    
+    console.log(formData);
 
     this.http.post('/angular-projects/portfolio/mail-service.php', formData).subscribe({
       next: (response) => {
