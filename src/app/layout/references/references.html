@@ -1,8 +1,20 @@
 <section class="ref-section">
   <div class="content-wrapper section-settings">
-    <h2>References</h2>
+    <h2>
+      @if (language.langSetting() == 'en') {
+        References
+      }
+      @if (language.langSetting() == 'de') {
+        Referenzen
+      }
+    </h2>
     <p class="text-regular">
-      I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.
+      @if (language.langSetting() == 'en') {
+        I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me.
+      }
+      @if (language.langSetting() == 'de') {
+        Ich arbeite sowohl selbstständig als auch gerne im Team. Hier erfährst du, was meine Kollegen über die Zusammenarbeit mit mir sagen.
+      }
     </p>
     <div class="references-wrpr">
       @for (item of referenceList; track $index) {
@@ -10,7 +22,14 @@
           <img src="./assets/images/quote-icon.png" alt="quote icon" />
           <p class="reference__name">{{ item.name }}</p>
           <p class="reference__role">{{ item.role }}</p>
-          <p class="reference__ref">{{ item.reference }}</p>
+          <p class="reference__ref">
+            @if (language.langSetting() == 'en') {
+              {{ item.referenceEn }}
+            }
+            @if (language.langSetting() == 'de') {
+              {{ item.referenceDe }}
+            }
+          </p>
         </div>
       }
     </div>
