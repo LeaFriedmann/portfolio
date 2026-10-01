@@ -11,6 +11,15 @@
     min-height: calc(100dvh - glob.$header-height - glob.$footer-height-mobile + 1px);
   }
 
+  h2 {
+    @include glob.font-syne(x-bold, 24, 4.5vw, 70);
+
+    @include glob.mobile() {
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
+  }
+
   h3 {
     color: glob.$green;
     @include glob.font-overpass(bold, 20, 20px, 20);
