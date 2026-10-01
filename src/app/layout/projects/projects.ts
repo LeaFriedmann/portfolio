@@ -28,7 +28,7 @@ export class Projects {
         'Task-Manager nach dem Kanban-Prinzip. Aufgaben lassen sich per Drag-and-Drop erstellen und organisieren sowie Benutzern und Kategorien zuweisen.',
       imgUrl: './assets/images/join-preview.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/join.git',
-      liveUrl: '/angular-projects/join',
+      liveUrl: 'https://join.lea-friedmann.de/',
     },
     {
       name: 'El Pollo loco',
@@ -39,7 +39,7 @@ export class Projects {
         'Ein kleines Jump-and-Run-Spiel auf Basis objektorientierter Programmierung. Hilf Pepe, Münzen und Salsa-Flaschen zu sammeln und sich gegen das Huhn zu behaupten.',
       imgUrl: './assets/images/el-pollo-loco-privew.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/El-pollo-loco.git',
-      liveUrl: '/El pollo loco/',
+      liveUrl: 'https://el-pollo-loco.lea-friedmann.de/',
     },
     {
       name: 'Pokedex',
@@ -48,7 +48,7 @@ export class Projects {
       descriptionDe: 'Eine Pokémon-Bibliothek auf Basis der PokéAPI zum Abrufen und Katalogisieren von Pokémon-Informationen.',
       imgUrl: './assets/images/pokedex-preview.png',
       gitHubUrl: 'https://github.com/LeaFriedmann/Pokedex.git',
-      liveUrl: '/Pokedex/',
+      liveUrl: 'https://pokedex.lea-friedmann.de/',
     },
   ];
 

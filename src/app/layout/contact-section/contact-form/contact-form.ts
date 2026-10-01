@@ -78,7 +78,7 @@ export class ContactForm {
 
     console.log(formData);
 
-    this.http.post('/angular-projects/portfolio/mail-service.php', formData).subscribe({
+    this.http.post('/mail-service.php', formData).subscribe({
       next: (response) => {
         console.log('message sent successfully:', response);
         this.mailStatus.set('success');
