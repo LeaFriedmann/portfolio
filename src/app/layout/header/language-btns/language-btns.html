@@ -1,10 +1,10 @@
 <div>
-  <button class="lang-btn" [class.lang-btn--active]="language.langSetting() === 'en'" (click)="language.langSetting.set('en')">
+  <button class="lang-btn" [class.lang-btn--active]="language.langSetting() === 'en'" (click)="language.setLanguage('en')">
     <div class="line"></div>
     EN
     <div class="line" [class.line--visible]="language.langSetting() === 'de'"></div>
   </button>
-  <button class="lang-btn" [class.lang-btn--active]="language.langSetting() === 'de'" (click)="language.langSetting.set('de')">
+  <button class="lang-btn" [class.lang-btn--active]="language.langSetting() === 'de'" (click)="language.setLanguage('de')">
     <div class="line"></div>
     DE
     <div class="line" [class.line--visible]="language.langSetting() === 'en'"></div>
