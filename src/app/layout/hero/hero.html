@@ -1,7 +1,7 @@
 <section class="hero" id="hero">
   <div class="section-settings content-wrapper">
     <section>
-      <h1>
+      <h1 [class.small-h1]="language.langSetting() == 'de'">
         @if (language.langSetting() == 'en') {
           Frontend Developer
         }
