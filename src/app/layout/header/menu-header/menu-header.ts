@@ -10,7 +10,6 @@ import { LanguageService } from '../../../shared/services/language-service';
 })
 export class MenuHeader {
   language = inject(LanguageService);
-  
   menuClosed: boolean = true;
 
   toggleMenu() {

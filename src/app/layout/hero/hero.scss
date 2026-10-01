@@ -19,9 +19,8 @@
       @include glob.font-syne(x-bold, 32, 10vw, 128);
     }
 
-    .small-h1{
+    .small-h1 {
       @include glob.font-syne(x-bold, 32, 8.5vw, 115);
-
     }
 
     .heading {
