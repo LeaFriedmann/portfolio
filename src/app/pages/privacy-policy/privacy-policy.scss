@@ -2,8 +2,14 @@
 
 .privacy-policy {
   @include glob.font-overpass(regular, 16, 16px, 16);
-  margin-bottom: 30px;
-  @include glob.flex();
+  @include glob.flex($justify: start);
+  padding-top: glob.px-to-rem(30);
+  padding-bottom: glob.px-to-rem(30);
+  min-height: calc(100dvh - glob.$header-height - glob.$footer-height + 1px);
+
+  @include glob.small-mobile() {
+    min-height: calc(100dvh - glob.$header-height - glob.$footer-height-mobile + 1px);
+  }
 
   h3 {
     color: glob.$green;

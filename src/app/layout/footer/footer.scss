@@ -3,12 +3,17 @@
 footer {
   // Prevents 1px gap below the clipped contact section
   margin-top: -1px;
+  height: glob.$footer-height;
   background-color: black;
   color: white;
   @include glob.font-overpass(regular, 18, 2vw, 22);
   padding-bottom: glob.px-to-rem(16);
   padding-top: glob.px-to-rem(32);
   @include glob.flex();
+
+  @include glob.small-mobile() {
+    height: glob.$footer-height-mobile;
+  }
 
   .section-top {
     width: 100%;
