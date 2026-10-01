@@ -175,24 +175,26 @@
         {{ mailStatus() === 'sending' ? 'Senden...' : 'Nachricht senden' }}
       }
     </button>
-    @if (mailStatus() === 'success') {
-      <p>
-        @if (language.langSetting() == 'en') {
-          Thank you! Your message has been sent.
-        }
-        @if (language.langSetting() == 'de') {
-          Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.
-        }
-      </p>
-    } @else if (mailStatus() === 'error') {
-      <p>
-        @if (language.langSetting() == 'en') {
-          Something went wrong. Please try again.
-        }
-        @if (language.langSetting() == 'de') {
-          Etwas ist schiefgelaufen. Bitte versuche es erneut.
-        }
-      </p>
-    }
+    <div class="feedback">
+      @if (mailStatus() === 'success') {
+        <p class="feedback--success">
+          @if (language.langSetting() == 'en') {
+            Thank you! Your message has been sent.
+          }
+          @if (language.langSetting() == 'de') {
+            Vielen Dank! Deine Nachricht wurde erfolgreich gesendet.
+          }
+        </p>
+      } @else if (mailStatus() === 'error') {
+        <p class="feedback--error">
+          @if (language.langSetting() == 'en') {
+            Something went wrong. Please try again.
+          }
+          @if (language.langSetting() == 'de') {
+            Etwas ist schiefgelaufen. Bitte versuche es erneut.
+          }
+        </p>
+      }
+    </div>
   </div>
 </form>
