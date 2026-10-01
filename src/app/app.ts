@@ -1,18 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './layout/header/header';
-import { Hero } from './layout/hero/hero';
-import { AboutMe } from './layout/about-me/about-me';
-import { MySkills } from './layout/my-skills/my-skills';
-import { Projects } from './layout/projects/projects';
-import { References } from './layout/references/references';
-import { AnimatedArrow } from './shared/components/arrow/arrow';
-import { ContactSection } from './layout/contact-section/contact-section';
 import { Footer } from './layout/footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Hero, AboutMe, MySkills, Projects, References, AnimatedArrow, ContactSection, Footer],
+  imports: [RouterOutlet, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

@@ -76,11 +76,8 @@ export class ContactForm {
       message: this.message?.value,
     };
 
-    console.log(formData);
-
     this.http.post('/mail-service.php', formData).subscribe({
       next: (response) => {
-        console.log('message sent successfully:', response);
         this.mailStatus.set('success');
         this.contactForm.reset();
       },

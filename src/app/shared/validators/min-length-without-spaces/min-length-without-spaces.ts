@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { AbstractControl, ReactiveFormsModule, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 export function minLengthWithoutSpaces(minLength: number): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -11,11 +10,3 @@ export function minLengthWithoutSpaces(minLength: number): ValidatorFn {
     return trimmedLength < minLength ? { stringTooShort: { value: control.value } } : null;
   };
 }
-
-@Component({
-  selector: 'app-min-length-without-spaces',
-  imports: [ReactiveFormsModule],
-  templateUrl: './min-length-without-spaces.html',
-  styleUrl: './min-length-without-spaces.scss',
-})
-export class MinLengthWithoutSpaces {}

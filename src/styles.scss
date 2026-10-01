@@ -15,9 +15,9 @@
   border: initial;
 }
 
-html:not(:has(.menu.closed-menu)) {
-  scrollbar-gutter: stable;
-}
+// html:not(:has(.menu.closed-menu)) {
+//   scrollbar-gutter: stable;
+// }
 
 body {
   background-color: glob.$cream;
