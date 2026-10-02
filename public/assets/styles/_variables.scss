@@ -8,4 +8,5 @@ $content-max-width: func.px-to-rem(1440);
 $footer-height: func.px-to-rem(140);
 $footer-height-mobile: func.px-to-rem(240);
 $header-height: func.use-clamp(80, 10vh, 105);
-$scroll-margin-top: calc($header-height + func.px-to-rem(100));
+$scroll-margin-top: calc($header-height + func.px-to-rem(60));
+$scroll-margin-top-mobile: calc($scroll-margin-top - func.px-to-rem(30)) 

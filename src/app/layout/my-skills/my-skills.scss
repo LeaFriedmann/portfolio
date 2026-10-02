@@ -1,8 +1,12 @@
 @use '../../../../public/assets/styles/all-styles' as glob;
 
 #my-skills {
-  scroll-margin-top: glob.$scroll-margin-top;
+  scroll-margin-top: calc(glob.$scroll-margin-top - glob.px-to-rem(30));
   @include glob.flex();
+
+  @include glob.small-mobile(){
+    scroll-margin-top: calc(glob.$scroll-margin-top-mobile - glob.px-to-rem(30));
+  }
 }
 
 .skills {

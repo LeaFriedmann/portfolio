@@ -5,6 +5,10 @@
   @include glob.flex();
   scroll-margin-top: glob.$scroll-margin-top;
 
+  @include glob.small-mobile() {
+    scroll-margin-top: glob.$scroll-margin-top-mobile;
+  }
+
   .content-wrapper {
     @include glob.flex();
 
