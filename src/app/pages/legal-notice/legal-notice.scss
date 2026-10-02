@@ -2,8 +2,13 @@
 
 .section-legal-notice {
   @include glob.font-overpass(regular, 16, 16px, 16);
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   @include glob.flex();
+  min-height: calc(100dvh - glob.$footer-height - glob.$header-height);
+
+  @include glob.small-mobile() {
+    min-height: calc(100dvh - glob.$footer-height-mobile - glob.$header-height);
+  }
 
   h3 {
     color: glob.$green;
